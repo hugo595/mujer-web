@@ -142,7 +142,7 @@
                     </div>
                 </div>
 
-                <div id="quiz-panel" class="glass-panel animate-fade-in" style="max-width: 800px; margin: 0 auto; padding: 4rem; border-radius: var(--border-radius-xl); text-align: center;">
+                <div id="quiz-panel" class="glass-panel animate-fade-in" style="max-width: 800px; margin: 0 auto; padding: clamp(1.5rem, 4vw, 4rem); border-radius: var(--border-radius-xl); text-align: center;">
                     <div id="quiz-header" style="font-size: 4rem; margin-bottom: 2rem;">🫣</div>
                     
                     <p id="quiz-scenario" style="font-size: 1.35rem; line-height: 1.6; font-weight: 600; color: var(--color-text); margin-bottom: 3rem; min-height: 80px;">
@@ -150,11 +150,11 @@
                     </p>
 
                     <div id="quiz-actions" style="display: flex; justify-content: center; gap: 1.5rem; margin-bottom: 3rem;">
-                        <button onclick="checkAnswer(true)" class="btn btn-red" style="padding: 1.25rem 2.5rem; font-size: 1.1rem; border-radius: var(--border-radius-full); display: flex; align-items: center; gap: 0.75rem; background: #d32f2f; color: white;">
-                            <i data-lucide="alert-triangle"></i> Sí es violencia
+                        <button onclick="checkAnswer(true)" class="btn btn-red" style="padding: clamp(0.6rem, 2vw, 1.25rem) clamp(1rem, 3vw, 2.5rem); font-size: clamp(0.85rem, 2.5vw, 1.1rem); border-radius: var(--border-radius-full); display: flex; align-items: center; gap: 0.5rem; background: #d32f2f; color: white; min-width: unset; width: auto;">
+                            <i data-lucide="alert-triangle" style="width:16px;height:16px;"></i> Sí es violencia
                         </button>
-                        <button onclick="checkAnswer(false)" class="btn btn-green" style="padding: 1.25rem 2.5rem; font-size: 1.1rem; border-radius: var(--border-radius-full); display: flex; align-items: center; gap: 0.75rem; background: #2e7d32; color: white;">
-                            <i data-lucide="check-circle"></i> No es violencia
+                        <button onclick="checkAnswer(false)" class="btn btn-green" style="padding: clamp(0.6rem, 2vw, 1.25rem) clamp(1rem, 3vw, 2.5rem); font-size: clamp(0.85rem, 2.5vw, 1.1rem); border-radius: var(--border-radius-full); display: flex; align-items: center; gap: 0.5rem; background: #2e7d32; color: white; min-width: unset; width: auto;">
+                            <i data-lucide="check-circle" style="width:16px;height:16px;"></i> No es violencia
                         </button>
                     </div>
 
