@@ -349,7 +349,11 @@
                             setTimeout(() => {
                                 document.getElementById('game-panel').style.opacity = '0.3';
                                 document.getElementById('game-complete').style.display = 'block';
-                                document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
+                                const activitySection = document.getElementById('actividad');
+                                if (activitySection) {
+                                    const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                                    window.scrollTo({top: y, behavior: 'smooth'});
+                                }
                             }, 500);
                         }
                     } else {

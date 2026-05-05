@@ -210,9 +210,16 @@
         }
 
         function finishGame() {
+            const results = document.getElementById('game-results');
+            results.style.display = 'block';
+            
+            const gameSection = document.getElementById('actividad');
+            if (gameSection) {
+                const y = gameSection.getBoundingClientRect().top + window.pageYOffset - 100;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
+
             document.getElementById('scenario-card').style.display = 'none';
-            document.getElementById('game-results').style.display = 'block';
-            document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
             
             const title = document.getElementById('results-title');
             const message = document.getElementById('results-message');

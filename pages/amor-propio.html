@@ -286,11 +286,20 @@
 
         function showResults() {
             document.getElementById('quiz-progress-bar').style.width = '100%';
-            document.getElementById('quiz-card').style.display = 'none';
-            document.getElementById('quiz-results').style.display = 'block';
+            
+            // Show results first to maintain page height
+            const results = document.getElementById('quiz-results');
+            results.style.display = 'block';
+            
+            // Force scroll to game start
+            const gameSection = document.getElementById('actividad');
+            if (gameSection) {
+                const yOffset = -100; 
+                const y = gameSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
+                window.scrollTo({top: y, behavior: 'smooth'});
+            }
 
-            // Ensure we stay at the top of the game section
-            document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
+            document.getElementById('quiz-card').style.display = 'none';
 
             const pct = score / shuffledData.length;
             let emoji, title, message;

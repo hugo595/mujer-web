@@ -317,6 +317,21 @@
             }
 
             function showResults() {
+                const results = document.getElementById('quiz-results');
+                results.style.display = 'block';
+
+                const gameSection = document.getElementById('actividad');
+                if (gameSection) {
+                    const y = gameSection.getBoundingClientRect().top + window.pageYOffset - 100;
+                    window.scrollTo({top: y, behavior: 'smooth'});
+                }
+
+                document.getElementById('quiz-scenario').style.display = 'none';
+                document.getElementById('quiz-header').style.display = 'none';
+                document.getElementById('quiz-feedback-panel').style.display = 'none';
+                document.getElementById('quiz-navigation').style.display = 'none';
+                document.getElementById('quiz-progress-container').style.display = 'none';
+
                 const total = quizData.length;
                 const ratio = score / total;
                 let emoji, title, message;
@@ -336,19 +351,11 @@
                 document.getElementById('results-title').textContent = title;
                 document.getElementById('results-message').textContent = message;
                 document.getElementById('results-score').textContent = `${score}/${total}`;
-
-                document.getElementById('quiz-scenario').style.display = 'none';
-                document.getElementById('quiz-header').style.display = 'none';
-                document.getElementById('quiz-feedback-panel').style.display = 'none';
-                document.getElementById('quiz-navigation').style.display = 'none';
-                document.getElementById('quiz-progress-container').style.display = 'none';
-                document.getElementById('quiz-results').style.display = 'block';
             }
 
             function restartQuiz() {
-                currentIndex = 0;
-                score = 0;
-                loadQuestion();
+                window.location.href = window.location.pathname + '#actividad';
+                window.location.reload();
             }
 
             document.addEventListener('DOMContentLoaded', loadQuestion);
