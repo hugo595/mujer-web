@@ -1720,9 +1720,9 @@ img {
   .transport-card {
     flex-direction: column !important;
     align-items: stretch !important;
-    padding: 1.25rem !important;
-    gap: 1rem !important;
-    max-width: 350px;
+    padding: 0.85rem !important;
+    gap: 0.6rem !important;
+    max-width: 330px;
     margin: 0 auto !important;
     box-shadow: var(--shadow-lg) !important;
   }
@@ -1731,17 +1731,22 @@ img {
     width: 100% !important;
   }
   .transport-card img {
-    height: 240px !important; 
+    height: 190px !important; 
     width: 100% !important;
     object-fit: cover !important;
-    border-radius: var(--border-radius-lg) !important;
+    border-radius: var(--border-radius-md) !important;
   }
   .transport-card h3 {
-    font-size: 1.3rem !important;
-    margin-bottom: 0.8rem !important;
+    font-size: 1.15rem !important;
+    margin-bottom: 0.4rem !important;
   }
   .transport-card p {
-    font-size: 0.9rem !important;
+    font-size: 0.85rem !important;
     margin: 0 !important;
+    line-height: 1.3 !important;
+  }
+  .transport-card i {
+    width: 14px !important;
+    height: 14px !important;
   }
 }
