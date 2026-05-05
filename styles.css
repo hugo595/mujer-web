@@ -1749,10 +1749,10 @@ img {
     width: 14px !important;
     height: 14px !important;
   }
-  
-  /* Ajuste del mapa hacia la izquierda */
-  #ubicacion .glass-feature-card:first-child {
-    margin-left: -2rem !important;
-    width: calc(100% + 2rem) !important;
+  /* Ajuste de padding para las tarjetas de ubicación en móvil */
+  #ubicacion .glass-feature-card {
+    padding: 1.25rem !important;
+    margin-left: 0 !important;
+    width: 100% !important;
   }
 }
