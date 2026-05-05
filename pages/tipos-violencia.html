@@ -370,8 +370,8 @@
             }
 
             function resetGame() {
-                window.location.hash = 'actividad';
-                location.reload();
+                window.location.href = window.location.pathname + '#actividad';
+                window.location.reload();
             }
 
             document.addEventListener('DOMContentLoaded', initGame);
