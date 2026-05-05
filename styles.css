@@ -1756,4 +1756,7 @@ img {
     margin-left: 0 !important;
     width: 100% !important;
   }
+/* Ocultar botón de Salida Rápida en todas las páginas */
+panic-button {
+  display: none !important;
 }
