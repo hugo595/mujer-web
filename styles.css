@@ -1756,7 +1756,27 @@ img {
     margin-left: 0 !important;
     width: 100% !important;
   }
+}
 /* Ocultar botón de Salida Rápida en todas las páginas */
 panic-button {
   display: none !important;
-}
+}
+
+/* Video primero en móvil, frases debajo */
+@media (max-width: 768px) {
+  .video-side-container {
+    order: -1 !important;
+  }
+  .phrases-container {
+    order: 1 !important;
+  }
+  /* Asegurar que el grid padre sea flex column */
+  .glass-panel > .animate-fade-in {
+    width: 100%;
+  }
+  /* Para los grids de 2 columnas que contienen video + texto */
+  section .glass-panel[style*="grid-template-columns"] {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+}
