@@ -1715,3 +1715,24 @@ img {
   background: inherit;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
 }
+
+/* Tarjetas de Transporte Responsivas */
+.transport-card {
+  display: flex !important;
+  gap: 1.5rem !important;
+  align-items: center !important;
+}
+
+@media (max-width: 768px) {
+  .transport-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+  }
+  .transport-card > div:first-child {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+  .transport-card img {
+    height: 200px !important;
+  }
+}
