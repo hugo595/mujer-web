@@ -901,7 +901,8 @@ img {
   }
 
   .btn {
-    width: 100%;
+    width: auto;
+    min-width: 200px;
     justify-content: center;
   }
 
