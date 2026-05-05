@@ -125,11 +125,11 @@
                         </svg>
                     </div>
 
-                    <div id="scenario-card" class="glass-panel" style="padding: 2.5rem; border-radius: 28px; text-align: center; background: white; border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
-                        <p id="scenario-text" style="font-size: 1.25rem; font-weight: 600; line-height: 1.6; margin-bottom: 2rem; min-height: 4rem;">Cargando situación...</p>
-                        <div style="display: flex; gap: 1rem; justify-content: center;">
-                            <button onclick="checkAnswer('desigualdad')" class="btn" style="background: rgba(211, 47, 47, 0.1); color: #d32f2f; border: 2px solid #d32f2f; padding: 1rem 2rem; flex: 1; border-radius: 16px; font-weight: 700;">Desigualdad</button>
-                            <button onclick="checkAnswer('equidad')" class="btn" style="background: rgba(0, 131, 143, 0.1); color: var(--color-secondary); border: 2px solid var(--color-secondary); padding: 1rem 2rem; flex: 1; border-radius: 16px; font-weight: 700;">Equidad</button>
+                    <div id="scenario-card" class="glass-panel" style="padding: clamp(1rem, 4vw, 2.5rem); border-radius: 28px; text-align: center; background: white; border: 1px solid var(--color-border); box-shadow: var(--shadow-md);">
+                        <p id="scenario-text" style="font-size: clamp(1rem, 3vw, 1.25rem); font-weight: 600; line-height: 1.6; margin-bottom: 1.5rem; min-height: 3rem;">Cargando situación...</p>
+                        <div style="display: flex; gap: 0.5rem; justify-content: center; width: 100%;">
+                            <button onclick="checkAnswer('desigualdad')" class="btn" style="background: rgba(211, 47, 47, 0.1); color: #d32f2f; border: 2px solid #d32f2f; padding: clamp(0.6rem, 2vw, 1rem) 0.5rem; flex: 1; border-radius: 16px; font-weight: 700; font-size: clamp(0.7rem, 2.5vw, 1rem); min-width: 0; white-space: nowrap; transition: all 0.2s;">Desigualdad</button>
+                            <button onclick="checkAnswer('equidad')" class="btn" style="background: rgba(0, 131, 143, 0.1); color: var(--color-secondary); border: 2px solid var(--color-secondary); padding: clamp(0.6rem, 2vw, 1rem) 0.5rem; flex: 1; border-radius: 16px; font-weight: 700; font-size: clamp(0.7rem, 2.5vw, 1rem); min-width: 0; white-space: nowrap; transition: all 0.2s;">Equidad</button>
                         </div>
                     </div>
 
