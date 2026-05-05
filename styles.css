@@ -1715,5 +1715,30 @@ img {
   background: inherit;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
 }
+
+/* Mejora de transporte para móvil (Vertical) */
+@media (max-width: 768px) {
+  .transport-card {
+    flex-direction: column !important;
+    align-items: stretch !important;
+    padding: 1.2rem !important;
+    gap: 1.2rem !important;
+  }
+  .transport-card > div:first-child {
+    flex: 0 0 auto !important;
+    width: 100% !important;
+  }
+  .transport-card img {
+    height: 280px !important; /* Mantiene el tamaño original intacto */
+    width: 100% !important;
+    object-fit: cover !important;
+  }
+  .transport-card h3 {
+    font-size: 1.4rem !important;
+  }
+  .transport-card p {
+    font-size: 0.95rem !important;
+  }
+}
 }
 }
