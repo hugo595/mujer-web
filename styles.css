@@ -1727,12 +1727,10 @@ img {
   .transport-card {
     flex-direction: column !important;
     align-items: stretch !important;
+    padding: 1rem !important;
   }
   .transport-card > div:first-child {
     flex: 0 0 auto !important;
     width: 100% !important;
-  }
-  .transport-card img {
-    height: 200px !important;
   }
 }
