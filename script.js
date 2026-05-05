@@ -215,11 +215,11 @@ class AppHeader extends HTMLElement {
             display: none;
             width: 100%;
             flex-direction: row;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
             justify-content: flex-start;
             align-items: center;
-            padding: 0.5rem 0.8rem;
-            gap: 0.4rem;
+            padding: 0.4rem 0.6rem;
+            gap: 0.3rem;
             border-top: 1px solid var(--color-border);
             background: var(--color-surface);
             order: 3;
@@ -227,15 +227,17 @@ class AppHeader extends HTMLElement {
           .main-nav.active { display: flex; }
           .mobile-toggle { display: block; }
           .nav-link {
-            font-size: 0.78rem !important;
-            padding: 0.35rem 0.75rem !important;
+            font-size: 0.72rem !important;
+            padding: 0.3rem 0.6rem !important;
+            white-space: nowrap;
           }
           .btn-contact {
-            font-size: 0.78rem !important;
-            padding: 0.35rem 0.75rem !important;
-            gap: 0.3rem !important;
+            font-size: 0.72rem !important;
+            padding: 0.3rem 0.6rem !important;
+            gap: 0.25rem !important;
+            white-space: nowrap;
           }
-          .btn-contact i { width: 14px !important; height: 14px !important; }
+          .btn-contact i { width: 13px !important; height: 13px !important; }
           .dropdown-menu {
             position: absolute;
             transform: none;
