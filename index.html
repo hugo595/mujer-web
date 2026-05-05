@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instancia Municipal de las Mujeres | Gobierno Municipal</title>
+
+    <!-- Google Fonts: Inter & Outfit -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+    <!-- Header Web Component -->
+    <app-header></app-header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero bg-mesh-aurora">
+            <div class="container animate-fade-in">
+                <h1 style="font-size: 2.8rem; margin-bottom: 3.5rem; text-shadow: 0 4px 12px rgba(0,0,0,0.2);">¿Cómo se trabaja dentro de las pláticas o talleres?</h1>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 2rem; margin-bottom: 4rem;">
+                    
+                    <!-- Card 1 -->
+                    <div class="glass-feature-card">
+                        <div class="glass-feature-icon">
+                            <i data-lucide="users"></i>
+                        </div>
+                        <h4 style="color: white; font-size: 1.25rem;">Interactividad Directa</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.5;">Actividades diseñadas específicamente para la edad y contexto de cada grupo de participantes.</p>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="glass-feature-card">
+                        <div class="glass-feature-icon">
+                            <i data-lucide="brain"></i>
+                        </div>
+                        <h4 style="color: white; font-size: 1.25rem;">Reflexión Guiada</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.5;">Dinámicas profundas que permiten cuestionar prejuicios y construir nuevos conocimientos.</p>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="glass-feature-card">
+                        <div class="glass-feature-icon">
+                            <i data-lucide="message-square"></i>
+                        </div>
+                        <h4 style="color: white; font-size: 1.25rem;">Espacio de Escucha</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.5;">Un entorno seguro donde compartir experiencias y opiniones enriquece a toda la comunidad.</p>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="glass-feature-card">
+                        <div class="glass-feature-icon">
+                            <i data-lucide="heart-handshake"></i>
+                        </div>
+                        <h4 style="color: white; font-size: 1.25rem;">Inclusión</h4>
+                        <p style="color: rgba(255,255,255,0.8); font-size: 0.95rem; line-height: 1.5;">Actividades accesibles que consideran necesidades neurocognitivas y sociales para un desarrollo equitativo.</p>
+                    </div>
+
+                </div>
+
+                <div style="display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; position: relative; z-index: 10;">
+                    <a href="#temas" class="btn btn-primary"
+                        style="background-color: white; color: var(--color-primary); padding: 1.25rem 2.5rem; font-weight: 700; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        Explorar Temas
+                    </a>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Topics Grid Section -->
+        <section id="temas" class="section-padding" style="background-color: var(--color-bg); border-top: none;">
+            <div class="container text-center animate-fade-in" style="margin-bottom: 4rem;">
+                <span class="badge" style="background: rgba(106, 27, 154, 0.1); color: var(--color-primary); margin-bottom: 1rem;">Recursos Educativos</span>
+                <h2 style="font-size: 2.2rem; color: var(--color-text); margin-bottom: 1rem;">¿En qué podemos apoyarte hoy?</h2>
+                <p class="text-muted" style="max-width: 650px; margin: 0 auto; font-size: 1.1rem;">Navega por nuestras herramientas diseñadas para fomentar tu bienestar y seguridad integral.</p>
+            </div>
+
+            <div class="topics-grid">
+
+                <!-- Violentómetro Card (Destacada) -->
+                <a href="pages/violentometro.html" class="card"
+                    style="text-decoration: none; border-left: 5px solid var(--color-danger); background: white;">
+                    <div class="card-icon"
+                        style="color: var(--color-danger); background-color: rgba(211, 47, 47, 0.1);">
+                        <i data-lucide="thermometer-sun"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Conoce el Violentómetro</h3>
+                    <p class="card-text">Herramienta gráfica para medir e identificar el grado de violencia en una relación amorosa, familiar o laboral.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-danger);">
+                        Medir violencia <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 1 -->
+                <a href="pages/prevencion.html" class="card" style="text-decoration: none; border-left: 3px solid var(--color-primary); background: white;">
+                    <div class="card-icon" style="color: var(--color-primary); background-color: rgba(106, 27, 154, 0.05);">
+                        <i data-lucide="shield-alert"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Prevención de Violencia</h3>
+                    <p class="card-text">Promover la prevención con perspectiva de género, identificando riesgos y fomentando el respeto.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 2 -->
+                <a href="pages/tipos-violencia.html" class="card" style="text-decoration: none; border-left: 3px solid var(--color-primary); background: white;">
+                    <div class="card-icon" style="color: var(--color-primary); background-color: rgba(106, 27, 154, 0.05);">
+                        <i data-lucide="alert-triangle"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Tipos de Violencia</h3>
+                    <p class="card-text">Informar sobre los differentes tipos de violencia para identificarlos y prevenirlos en distintos contextos.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 3 -->
+                <a href="pages/amor-propio.html" class="card" style="text-decoration: none; border-left: 3px solid #E91E63; background: white;">
+                    <div class="card-icon" style="color: #E91E63; background-color: rgba(233, 30, 99, 0.1);">
+                        <i data-lucide="heart"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Amor Propio</h3>
+                    <p class="card-text">Fortalecer la autoestima y el reconocimiento del valor personal para una vida segura y plena.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 4 -->
+                <a href="pages/empoderamiento.html" class="card" style="text-decoration: none; border-left: 3px solid #00838F; background: white;">
+                    <div class="card-icon" style="color: #00838F; background-color: rgba(0, 131, 143, 0.1);">
+                        <i data-lucide="trending-up"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Empoderamiento</h3>
+                    <p class="card-text">Habilidades y autonomía para que las mujeres tomen decisiones sobre su cuerpo y vida activamente.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 5 -->
+                <a href="pages/equidad-genero.html" class="card" style="text-decoration: none; border-left: 3px solid #6A1B9A; background: white;">
+                    <div class="card-icon" style="color: #6A1B9A; background-color: rgba(106, 27, 154, 0.1);">
+                        <i data-lucide="scale"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Equidad de Género</h3>
+                    <p class="card-text">Fomentando el respeto, igualdad de oportunidades y la eliminación de estereotipos sociales.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 6 -->
+                <a href="pages/masculinidades.html" class="card" style="text-decoration: none; border-left: 3px solid #1565C0; background: white;">
+                    <div class="card-icon" style="color: #1565C0; background-color: rgba(21, 101, 192, 0.1);">
+                        <i data-lucide="users"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Nuevas Masculinidades</h3>
+                    <p class="card-text">Reflexión sobre actitudes basadas en el respeto, la igualdad y la responsabilidad emocional.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 7 -->
+                <a href="pages/regulacion-emocional.html" class="card" style="text-decoration: none; border-left: 3px solid #2E7D32; background: white;">
+                    <div class="card-icon" style="color: #2E7D32; background-color: rgba(46, 125, 50, 0.1);">
+                        <i data-lucide="brain"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Regulación Emocional</h3>
+                    <p class="card-text">Herramientas para gestionar emociones de manera saludable, previniendo conductas violentas.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 8 -->
+                <a href="pages/noviazgo.html" class="card" style="text-decoration: none; border-left: 3px solid #D32F2F; background: white;">
+                    <div class="card-icon" style="color: #D32F2F; background-color: rgba(211, 47, 47, 0.1);">
+                        <i data-lucide="heart-crack"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Violencia en el Noviazgo</h3>
+                    <p class="card-text">Sensibilización sobre señales de violencia en el noviazgo para promover relaciones sanas y seguras.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+                <!-- Card 9 -->
+                <a href="pages/violencia-genero.html" class="card" style="text-decoration: none; border-left: 3px solid #6A1B9A; background: white;">
+                    <div class="card-icon" style="color: #6A1B9A; background-color: rgba(106, 27, 154, 0.1);">
+                        <i data-lucide="x-octagon"></i>
+                    </div>
+                    <h3 class="card-title" style="color: var(--color-primary);">Violencia de Género</h3>
+                    <p class="card-text">Sensibilizar sobre sus manifestaciones psicológicas, físicas y sociales, promoviendo el respeto.</p>
+                    <div style="margin-top: 1.5rem; display: flex; align-items: center; gap: 0.5rem; font-weight: 700; color: var(--color-primary);">
+                        Leer más <i data-lucide="arrow-right" style="width: 16px; height: 16px;"></i>
+                    </div>
+                </a>
+
+            </div>
+        </section>
+
+
+        <!-- Location and Contact Section -->
+        <section id="ubicacion" class="section-padding bg-mesh-aurora">
+            <div class="container">
+                <div class="contact-section-grid" style="gap: 3rem; align-items: stretch;">
+                    <!-- Map Column -->
+                    <div class="glass-feature-card animate-fade-in" style="padding: 1rem; border-radius: var(--border-radius-xl); overflow: hidden; height: auto;">
+                        <iframe id="main-map"
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3747.1679212339623!2d-98.35733612534911!3d20.085266181338387!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d0568af4bfa723%3A0x78b176365e0f6467!2sInstancia%20Municipal%20Para%20El%20Desarrollo%20De%20Las%20Mujeres!5e0!3m2!1ses!2sus!4v1773782664351!5m2!1ses!2sus"
+                            width="100%" height="450" style="border:0; border-radius: var(--border-radius-lg); filter: grayscale(20%) invert(5%) contrast(105%);" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <div style="margin-top: 1.5rem; font-size: 0.95rem; color: rgba(255,255,255,0.75); padding: 1.25rem; background: rgba(255,255,255,0.05); border-left: 4px solid var(--color-primary); border-radius: 0 12px 12px 0; display: flex; align-items: flex-start; gap: 0.75rem;">
+                            <i data-lucide="info" style="width: 20px; height: 20px; flex-shrink: 0; color: white;"></i>
+                            <span>Nuestras oficinas están ubicadas justo a un costado del <strong style="color: white;">Polígono Guadalupe</strong>.</span>
+                        </div>
+                    </div>
+
+                    <!-- Info Column -->
+                    <div class="glass-feature-card animate-fade-in" style="animation-delay: 0.2s; display: flex; flex-direction: column; justify-content: center; padding: 3rem; background: linear-gradient(145deg, rgba(255,255,255,0.1), rgba(255,255,255,0.02)); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.15); box-shadow: 0 25px 45px rgba(0,0,0,0.2), inset 0 0 0 1px rgba(255,255,255,0.1);">
+                        
+                        <!-- Header with dynamic badge -->
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-bottom: 2rem; flex-wrap: wrap;">
+                            <h2 style="font-size: 2.2rem; margin: 0; color: white; font-weight: 800; letter-spacing: -0.5px; text-shadow: 0 2px 10px rgba(0,0,0,0.3);">Visítanos en Tulancingo</h2>
+                            <span id="hours-badge" class="badge" style="padding: 0.6rem 1.2rem; border-radius: 30px; font-weight: 700; font-size: 0.85rem; background: rgba(0, 0, 0, 0.25); color: white; text-transform: uppercase; letter-spacing: 1px; border: 1px solid rgba(255, 255, 255, 0.2); backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);"><i data-lucide="clock" style="width:14px; height:14px; margin-right:6px;"></i>Cargando...</span>
+                        </div>
+
+                        <!-- Description -->
+                        <p style="color: rgba(255,255,255,0.85); font-size: 1.15rem; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 400;">Estamos ubicadas en una zona céntrica diseñada para tu comodidad. Interactúa con el mapa o utiliza los accesos directos para llegar de manera segura o recibir orientación inmediata.</p>
+                        
+                        <!-- Address Card with Glassmorphic effect -->
+                        <div style="background: rgba(0,0,0,0.2); padding: 1.5rem; border-radius: 20px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 2.5rem; display: flex; justify-content: space-between; align-items: center; transition: all 0.3s ease; box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);">
+                            <div style="display: flex; gap: 1.2rem; align-items: center;">
+                                <div style="width: 48px; height: 48px; background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light)); border-radius: 14px; display: flex; align-items: center; justify-content: center; color: white; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);">
+                                    <i data-lucide="map-pin" style="width: 24px; height: 24px;"></i>
+                                </div>
+                                <div>
+                                    <p style="margin: 0; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; color: rgba(255,255,255,0.5); font-weight: 600;">Dirección Oficial</p>
+                                    <span id="office-address" style="font-size: 1rem; font-weight: 600; color: white; line-height: 1.4; display: block;">Calle Tolteca esq. Azteca, <br>Col. Guadalupe 3ra Sección</span>
+                                </div>
+                            </div>
+                            <button id="btn-copy-address" title="Copiar dirección" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.05); color: white; cursor: pointer; padding: 0.8rem; border-radius: 12px; transition: all 0.3s ease; display:flex; align-items:center; justify-content:center;">
+                                <i data-lucide="copy" style="width: 22px; height: 22px;"></i>
+                            </button>
+                        </div>
+
+                        <!-- Action Buttons Grid -->
+                        <div id="map-controls" style="display: grid; grid-template-columns: 1fr; gap: 1rem;">
+                            <a id="btn-open-maps" href="#" class="btn btn-primary" style="font-size: 1.1rem; padding: 1.2rem; background: linear-gradient(135deg, #FFFFFF, #F0F0F0); color: var(--color-primary-dark); border: none; font-weight: 800; border-radius: 16px; box-shadow: 0 8px 20px rgba(0,0,0,0.15); transition: all 0.3s ease;">
+                                <i data-lucide="map-pin"></i> VER EN GOOGLE MAPS
+                            </a>
+                            <a href="https://wa.me/527759742084" target="_blank" rel="noopener noreferrer" class="btn btn-outline-primary" style="font-size: 1.1rem; padding: 1.2rem; border: none; color: white; background: linear-gradient(135deg, rgba(37, 211, 102, 0.2), rgba(37, 211, 102, 0.05)); border-radius: 16px; display: flex; align-items: center; justify-content: center; gap: 0.75rem; font-weight: 700; box-shadow: inset 0 0 0 2px rgba(37, 211, 102, 0.5); backdrop-filter: blur(5px); transition: all 0.3s ease;">
+                                <i data-lucide="message-circle" style="color: #25D366;"></i> CHAT POR WHATSAPP
+                            </a>
+                            <p id="location-status" style="font-size: 0.85rem; color: rgba(255,255,255,0.5); margin: 0; display: none; text-align: center; margin-top: 5px;"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dedicated Transport Section -->
+        <section id="transporte" class="section-padding bg-mesh-premium" style="background-color: var(--color-bg); overflow: hidden;">
+            <div class="container">
+                <div class="text-center animate-fade-in" style="margin-bottom: 3rem;">
+                    <span class="badge" style="background: rgba(255, 255, 255, 0.15); color: white; margin-bottom: 1rem; border: 1px solid rgba(255,255,255,0.2);">Movilidad y Accesibilidad</span>
+                    <h2 style="font-size: 2.8rem; color: white; margin-bottom: 1rem; text-shadow: 0 2px 10px rgba(0,0,0,0.3); font-weight: 800;">Rutas de Transporte</h2>
+                    <p style="max-width: 600px; margin: 0 auto; color: rgba(255,255,255,0.8); font-size: 1.1rem;">Opciones principales para llegar a nuestras oficinas desde cualquier punto de Tulancingo.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 2rem;" class="animate-fade-in">
+                    
+                    <!-- Transport Card 1: Micro -->
+                    <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--border-radius-xl); display: flex; gap: 1.5rem; align-items: center; border: 1px solid rgba(106, 27, 154, 0.1);">
+                        <div style="flex: 0 0 40%; position: relative; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                            <img src="./assets/img/colectiva-amarilla.png" alt="Microbús" style="width: 100%; height: 280px; object-fit: cover;">
+                            <div style="position: absolute; top: 10px; left: 10px; background: #FFB300; color: #333; padding: 0.3rem 0.6rem; border-radius: 4px; font-weight: 800; font-size: 0.6rem; letter-spacing: 1px;">
+                                MICROBÚS
+                            </div>
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: var(--color-primary); display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="bus" style="width: 22px; height: 22px;"></i> Ruta La Cañada
+                            </h3>
+                            <div style="display: grid; gap: 0.8rem; font-size: 0.95rem;">
+                                <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                                    <i data-lucide="map-pin" style="width: 16px; height: 16px; color: var(--color-primary); margin-top: 3px;"></i>
+                                    <p style="margin: 0; color: var(--color-text-muted);"><strong>Ruta:</strong> La Cañada - Centro - Guadalupe.</p>
+                                </div>
+                                <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                                    <i data-lucide="eye" style="width: 16px; height: 16px; color: var(--color-primary); margin-top: 3px;"></i>
+                                    <p style="margin: 0; color: var(--color-text-muted);"><strong>Señal:</strong> Franjas amarillas/naranjas.</p>
+                                </div>
+                                <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                                    <i data-lucide="info" style="width: 16px; height: 16px; color: var(--color-primary); margin-top: 3px;"></i>
+                                    <p style="margin: 0; color: var(--color-text-muted);"><strong>Bajada:</strong> Entrada Col. Guadalupe.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Transport Card 2: Colectiva -->
+                    <div class="glass-panel" style="padding: 1.5rem; border-radius: var(--border-radius-xl); display: flex; gap: 1.5rem; align-items: center; border: 1px solid rgba(46, 125, 50, 0.1);">
+                        <div style="flex: 0 0 40%; position: relative; border-radius: var(--border-radius-lg); overflow: hidden; box-shadow: var(--shadow-md);">
+                            <img src="./assets/img/colectiva-verde.jpeg" alt="Colectiva Verde" style="width: 100%; height: 280px; object-fit: cover;">
+                            <div style="position: absolute; top: 10px; left: 10px; background: #2E7D32; color: white; padding: 0.3rem 0.6rem; border-radius: 4px; font-weight: 800; font-size: 0.6rem; letter-spacing: 1px;">
+                                COLECTIVA
+                            </div>
+                        </div>
+                        
+                        <div style="flex: 1;">
+                            <h3 style="font-size: 1.6rem; margin-bottom: 1rem; color: #2E7D32; display: flex; align-items: center; gap: 0.5rem;">
+                                <i data-lucide="bus-front" style="width: 22px; height: 22px;"></i> Ruta 17 Guadalupe
+                            </h3>
+                            <div style="display: grid; gap: 0.8rem; font-size: 0.95rem;">
+                                <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                                    <i data-lucide="map-pin" style="width: 16px; height: 16px; color: #2E7D32; margin-top: 3px;"></i>
+                                    <p style="margin: 0; color: var(--color-text-muted);"><strong>Base:</strong> Calle Libertad (Centro).</p>
+                                </div>
+                                <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                                    <i data-lucide="eye" style="width: 16px; height: 16px; color: #2E7D32; margin-top: 3px;"></i>
+                                    <p style="margin: 0; color: var(--color-text-muted);"><strong>Señal:</strong> Van blanca con franja verde.</p>
+                                </div>
+                                <div style="display: flex; gap: 0.6rem; align-items: flex-start;">
+                                    <i data-lucide="info" style="width: 16px; height: 16px; color: #2E7D32; margin-top: 3px;"></i>
+                                    <p style="margin: 0; color: var(--color-text-muted);"><strong>Bajada:</strong> En "El Polígono".</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ and Resources Grid -->
+        <section class="section-padding" style="background-color: var(--color-surface); border-top: none;">
+            <div class="container">
+                <div class="contact-section-grid" style="grid-template-columns: 1.5fr 1fr; gap: 4rem;">
+                    <!-- FAQ Column -->
+                    <div class="animate-fade-in">
+                        <h2 style="font-size: 2.2rem; margin-bottom: 2rem; color: var(--color-primary);">Preguntas Frecuentes</h2>
+                        <div class="faq-container">
+                            <div class="faq-item">
+                                <button class="faq-question">¿Los servicios tienen algún costo? <i data-lucide="chevron-down"></i></button>
+                                <div class="faq-answer">
+                                    <p>No. Todos nuestros servicios de asesoría jurídica, atención psicológica y acompañamiento son <strong>completamente gratuitos</strong> para todas las mujeres.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">¿Mis datos están seguros? <i data-lucide="chevron-down"></i></button>
+                                <div class="faq-answer">
+                                    <p>Absolutamente. Garantizamos la <strong>confidencialidad total</strong>. Tu información y tu proceso son privados y seguros con nosotros.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">¿Necesito cita previa? <i data-lucide="chevron-down"></i></button>
+                                <div class="faq-answer">
+                                    <p>Aunque recomendamos agendar para darte una mejor atención, puedes acudir directamente a nuestras oficinas en caso de una <strong>situación urgente</strong>.</p>
+                                </div>
+                            </div>
+                            <div class="faq-item">
+                                <button class="faq-question">¿Atienden a mujeres de otros municipios? <i data-lucide="chevron-down"></i></button>
+                                <div class="faq-answer">
+                                    <p>Nuestra prioridad es Tulancingo, pero <strong>orientamos a cualquier mujer</strong> que lo necesite y la canalizamos a la instancia correspondiente de su localidad si es necesario.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Sidebar: Help Lines & Downloads -->
+                    <div class="animate-fade-in" style="animation-delay: 0.2s;">
+                        <div class="glass-panel" style="padding: 2rem; border-radius: var(--border-radius-lg); margin-bottom: 2rem; border-left: 4px solid var(--color-danger);">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--color-danger);">
+                                <i data-lucide="phone-forwarded"></i> Líneas de Emergencia
+                            </h3>
+                            <div style="display: grid; gap: 1rem;">
+                                <a href="tel:911" class="hotline-card">
+                                    <span class="hotline-number">911</span>
+                                    <span class="hotline-desc">Emergencias Nacional</span>
+                                </a>
+                                <a href="tel:7757552222" class="hotline-card">
+                                    <span class="hotline-number">775 755 2222</span>
+                                    <span class="hotline-desc">Seguridad Pública Tulancingo</span>
+                                </a>
+                                <a href="tel:7757531732" class="hotline-card">
+                                    <span class="hotline-number">775 753 1732</span>
+                                    <span class="hotline-desc">Bomberos y Protección Civil</span>
+                                </a>
+                            </div>
+                        </div>
+
+                        <div class="glass-panel" style="padding: 2rem; border-radius: var(--border-radius-lg); border-left: 4px solid var(--color-secondary);">
+                            <h3 style="font-size: 1.3rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 0.5rem; color: var(--color-secondary);">
+                                <i data-lucide="download-cloud"></i> Recursos Útiles
+                            </h3>
+                            <div style="display: flex; flex-direction: column; gap: 1rem;">
+                                <div style="display: flex; gap: 1.25rem; align-items: center; padding: 1rem; background: var(--color-bg); border-radius: 12px; border: 1px solid var(--color-border);">
+                                    <img src="./assets/img/violentometro_digital.png" style="width: 60px; border-radius: 6px; box-shadow: var(--shadow-sm);">
+                                    <div style="flex: 1;">
+                                        <p style="font-size: 0.95rem; font-weight: 700; margin-bottom: 0.2rem; color: var(--color-text);">Violentómetro Oficial</p>
+                                        <p style="font-size: 0.8rem; color: var(--color-text-muted); margin-bottom: 0.5rem;">Guía visual de alerta.</p>
+                                        <a href="javascript:void(0)" onclick="downloadViolentometroPDF(event)" class="btn btn-outline-primary" style="font-size: 0.75rem; padding: 0.4rem 0.8rem; border-radius: 6px; text-decoration: none;">
+                                            <i data-lucide="download" style="width: 14px; height: 14px;"></i> Descargar
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- CTA Direct Support -->
+        <section style="background-color: var(--color-surface); border-top: none;">
+            <div class="container section-padding text-center">
+                <h2>¿Necesitas ayuda u orientación urgente?</h2>
+                <p class="text-muted" style="max-width: 600px; margin: 0 auto 2rem;">No estás sola. Nuestro equipo de
+                    psicólogas y abogadas están listas para escucharte y acompañarte en tu proceso sin costo alguno.</p>
+                <a href="tel:7759742084" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.75rem;">
+                    <i data-lucide="phone-call"></i> Llámamos ahora
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Panic Button Web Component -->
+    <panic-button></panic-button>
+
+    <!-- Footer Web Component -->
+    <app-footer></app-footer>
+
+    <!-- Scripts -->
+    <!-- PDF Generation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+
+</html>

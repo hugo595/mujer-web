@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regulación Emocional | Instancia Municipal de las Mujeres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .thermometer-container {
+            width: 80px;
+            height: 300px;
+            background: #eee;
+            border-radius: 40px;
+            position: relative;
+            margin: 0 auto 2rem;
+            border: 4px solid white;
+            box-shadow: var(--shadow-md);
+            overflow: hidden;
+        }
+        .thermometer-fill {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to top, #00acc1, #ffeb3b, #f44336);
+            transition: transform 1s cubic-bezier(0.4, 0, 0.2, 1);
+            transform-origin: bottom;
+        }
+        .strategy-btn {
+            background: white;
+            border: 2px solid var(--color-border);
+            padding: 1.25rem;
+            border-radius: 20px;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+        }
+        .strategy-btn:hover {
+            border-color: var(--color-secondary);
+            background: rgba(0, 131, 143, 0.05);
+            transform: translateX(10px);
+        }
+        .intensity-tag {
+            padding: 0.25rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    </style>
+
+</head>
+<body>
+    <app-header></app-header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero bg-mesh-premium" style="padding: 6rem 0;">
+            <div class="container animate-fade-in">
+                <span class="breadcrumb-label">Educación y Prevención</span>
+                <h1 style="font-size: 3.5rem; letter-spacing: -0.01em; margin-bottom: 1.5rem;">Regulación Emocional</h1>
+                <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                    Reconocer y gestionar nuestras emociones es la base de una convivencia libre de violencia y una vida plena.
+                </p>
+            </div>
+        </section>
+
+        <!-- Objective -->
+        <section class="objective-section reveal-scale" style="margin-top: -4rem;">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem; border-radius: 40px;">
+                    <div class="objective-container-premium">
+                        <div class="objective-visual">
+                            <div class="objective-icon-large">
+                                <i data-lucide="brain" style="width: 60px; height: 60px; color: var(--color-primary);"></i>
+                            </div>
+                        </div>
+                        <div class="objective-content-premium">
+                            <h2 style="font-size: 2.5rem; color: var(--color-primary-dark); margin-bottom: 1.5rem;">Nuestro Compromiso</h2>
+                            <p style="font-size: 1.25rem; line-height: 1.7; color: var(--color-text);">
+                                Brindar herramientas para identificar disparadores emocionales y desarrollar estrategias de respuesta asertivas.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Puntos de Reflexión Section -->
+        <section class="section-accent" style="padding: 6rem 0; overflow: hidden; position: relative;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="glass-panel" style="padding: 4rem; border-radius: 40px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 5rem; align-items: center; border: 1px solid rgba(106, 27, 154, 0.15); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);">
+                    <!-- Text/Phrases Side -->
+                    <div class="animate-fade-in" style="animation-delay: 0.1s;">
+                        <span class="breadcrumb-label" style="background: rgba(106, 27, 154, 0.1); color: var(--color-primary); border-color: rgba(106, 27, 154, 0.2); margin-bottom: 2rem;">Puntos de Reflexión</span>
+                        <h2 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 2.5rem; color: var(--color-primary-dark);">Galería de <br><span style="color: var(--color-primary);">Equilibrio Interior</span></h2>
+                        <div class="phrases-container" style="display: grid; gap: 1.5rem;">
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-primary); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Sentir es humano; regular es sabiduría."</p>
+                            </div>
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-secondary); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Tu calma es tu superpoder ante cualquier tormenta."</p>
+                            </div>
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-accent); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Gestionar tus emociones es el primer paso para una vida en paz."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Side -->
+                    <div class="video-side-container animate-fade-in" style="animation-delay: 0.3s; display: flex; justify-content: center; position: relative;">
+                        <div style="position: absolute; width: 140%; height: 140%; background: radial-gradient(circle, rgba(106, 27, 154, 0.15) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; pointer-events: none;"></div>
+                        
+                        <div class="video-gallery-container shadow-premium" 
+                             style="max-width: 280px; 
+                                    border-radius: 32px; 
+                                    overflow: hidden; 
+                                    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.4), 0 20px 40px -20px rgba(106, 27, 154, 0.3); 
+                                    background: #000; 
+                                    border: 6px solid #FFFFFF;
+                                    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                    cursor: pointer;
+                                    position: relative;
+                                    z-index: 1;"
+                             onmouseover="this.style.transform='scale(1.05) rotate(1deg)'" 
+                             onmouseout="this.style.transform='scale(1) rotate(0deg)'">
+                            
+                            <video disablePictureInPicture 
+                                   controlsList="nodownload noplaybackrate" 
+                                   onended="this.currentTime=0; this.pause();"
+                                   onclick="this.paused ? this.play() : this.pause();"
+                                   style="width: 100%; display: block; border-radius: 26px; cursor: pointer; transform: scale(1.1);"
+                                   title="Click para reproducir">
+                                <source src="../assets/img/regulacionemocional.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Game: Termómetro de Calma -->
+        <section id="actividad" style="background-color: var(--color-bg); padding: 5rem 0;">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 3.5rem;">
+                    <span class="breadcrumb-label">🎮 Dinámica de Bienestar</span>
+                    <h2 style="font-size: 2.25rem; margin-top: 1.5rem;">El Termómetro de la Calma</h2>
+                    <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Aprende a enfriar tus emociones intensas eligiendo la estrategia de regulación adecuada para cada nivel.</p>
+                </div>
+
+                <div id="game-viewport" style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; max-width: 900px; margin: 0 auto; align-items: center;">
+                    
+                    <!-- Thermometer Visual -->
+                    <div class="text-center">
+                        <div class="thermometer-container">
+                            <div id="thermo-fill" class="thermometer-fill" style="transform: scaleY(0.8);"></div>
+                        </div>
+                        <span id="level-label" style="font-weight: 800; font-size: 1.2rem; color: #f44336;">ALTO</span>
+                    </div>
+
+                    <!-- Game Control Area -->
+                    <div id="game-controls">
+                        <div id="scenario-box" class="glass-panel" style="padding: 2rem; border-radius: 24px; margin-bottom: 2rem; background: white;">
+                            <div id="intensity-badge" class="intensity-tag" style="background: rgba(244, 67, 54, 0.1); color: #f44336; margin-bottom: 1rem; display: inline-block;">Nivel 4: Muy Intenso</div>
+                            <p id="scenario-text" style="font-size: 1.2rem; font-weight: 600; line-height: 1.5;">Cargando situación...</p>
+                        </div>
+
+                        <div id="strategies-list" style="display: grid; gap: 1rem;">
+                            <!-- Buttons injected by JS -->
+                        </div>
+                    </div>
+                </div>
+
+                <div id="game-results" style="display: none; text-align: center; max-width: 600px; margin: 0 auto;">
+                    <div class="glass-panel" style="padding: 3rem; border-radius: 32px; background: white;">
+                        <div style="font-size: 4rem; margin-bottom: 1.5rem;">🧘✨</div>
+                        <h3 style="font-size: 2rem; color: var(--color-secondary); margin-bottom: 1rem;">¡Mente en Calma!</h3>
+                        <p style="font-size: 1.15rem; color: var(--color-text-muted); margin-bottom: 2.5rem;">Has logrado regular todas las emociones presentadas. Recuerda que la regulación es un músculo que se entrena día a día.</p>
+                        <button onclick="initGame()" class="btn btn-primary" style="padding: 1rem 3rem;">🔄 Reiniciar Dinámica</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <panic-button></panic-button>
+    <app-footer></app-footer>
+
+    <script src="../script.js"></script>
+    <script>
+        const thermoData = [
+            {
+                intensity: 4,
+                levelText: "ALTO",
+                color: "#f44336",
+                scenario: "Recibes una noticia que te genera muchísima rabia y sientes ganas de gritar.",
+                strategies: [
+                    { text: "Tomar un 'Tiempo Fuera', alejarse y caminar para soltar la energía.", correct: true, icon: "wind" },
+                    { text: "Responder en ese mismo momento para que sepan que estoy enojada.", correct: false, icon: "message-circle" },
+                    { text: "Suprimir el enojo y fingir que todo está bien.", correct: false, icon: "shield-alert" }
+                ]
+            },
+            {
+                intensity: 3,
+                levelText: "MEDIO",
+                color: "#ff9800",
+                scenario: "Sientes mucha frustración porque algo no salió como esperabas después de mucho esfuerzo.",
+                strategies: [
+                    { text: "Gritar a la primera persona que vea para desahogarme.", correct: false, icon: "zap" },
+                    { text: "Practicar 5 respiraciones profundas y escribir lo que siento.", correct: true, icon: "pen-tool" },
+                    { text: "Abandonar el proyecto y no volver a intentarlo jamás.", correct: false, icon: "x-circle" }
+                ]
+            },
+            {
+                intensity: 2,
+                levelText: "MODERADO",
+                color: "#ffeb3b",
+                scenario: "Te sientes ansiosa y un poco abrumada por tener muchas cosas pendientes hoy.",
+                strategies: [
+                    { text: "Hacer una lista de prioridades y enfocarse en una tarea a la vez.", correct: true, icon: "list-checks" },
+                    { text: "Seguir trabajando sin parar ni comer hasta terminar todo.", correct: false, icon: "alert-triangle" },
+                    { text: "Ignorar los pendientes y ver redes sociales por horas.", correct: false, icon: "smartphone" }
+                ]
+            },
+            {
+                intensity: 1,
+                levelText: "LEVE",
+                color: "#00acc1",
+                scenario: "Sientes una pequeña tensión en los hombros después de una conversación incómoda.",
+                strategies: [
+                    { text: "Revisar el celular para distraerse rápido.", correct: false, icon: "eye" },
+                    { text: "Hacer estiramientos suaves y reconocer qué me incomodó.", correct: true, icon: "smile" },
+                    { text: "Quejarme con todos mis conocidos sobre esa persona.", correct: false, icon: "share-2" }
+                ]
+            }
+        ];
+
+        let currentIndex = 0;
+
+        function initGame() {
+            currentIndex = 0;
+            document.getElementById('game-viewport').style.display = 'grid';
+            document.getElementById('game-results').style.display = 'none';
+            showStep();
+        }
+
+        function showStep() {
+            if (currentIndex >= thermoData.length) {
+                finishGame();
+                return;
+            }
+            
+            const step = thermoData[currentIndex];
+            
+            // Update Thermo Visual
+            const fill = document.getElementById('thermo-fill');
+            const label = document.getElementById('level-label');
+            const scale = (step.intensity / 4);
+            fill.style.transform = `scaleY(${scale})`;
+            label.textContent = step.levelText;
+            label.style.color = step.color;
+
+            // Update Text
+            const badge = document.getElementById('intensity-badge');
+            badge.textContent = `Nivel ${step.intensity}: ${step.levelText}`;
+            badge.style.background = `${step.color}22`;
+            badge.style.color = step.color;
+            document.getElementById('scenario-text').textContent = step.scenario;
+
+            // Inyectar Estrategias
+            const list = document.getElementById('strategies-list');
+            list.innerHTML = '';
+            
+            step.strategies.forEach(opt => {
+                const btn = document.createElement('button');
+                btn.className = 'strategy-btn';
+                btn.innerHTML = `
+                    <div style="width: 40px; height: 40px; background: #f8f9fa; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: var(--color-primary);">
+                        <i data-lucide="${opt.icon}" style="width: 20px; height: 20px;"></i>
+                    </div>
+                    <span>${opt.text}</span>
+                `;
+                btn.onclick = () => selectStrategy(opt.correct, btn);
+                list.appendChild(btn);
+            });
+
+            if (window.lucide) window.lucide.createIcons();
+        }
+
+        function selectStrategy(correct, btn) {
+            if (correct) {
+                btn.style.borderColor = "var(--color-secondary)";
+                btn.style.background = "rgba(0, 131, 143, 0.1)";
+                currentIndex++;
+                setTimeout(showStep, 800);
+            } else {
+                btn.style.borderColor = "#f44336";
+                btn.style.background = "rgba(244, 67, 54, 0.05)";
+                btn.style.transform = "translateX(5px)";
+                setTimeout(() => btn.style.transform = "translateX(0)", 200);
+            }
+        }
+
+        function finishGame() {
+            document.getElementById('game-viewport').style.display = 'none';
+            document.getElementById('game-results').style.display = 'block';
+            document.getElementById('thermo-fill').style.transform = 'scaleY(0)';
+            document.getElementById('level-label').textContent = "CALMA";
+            document.getElementById('level-label').style.color = "var(--color-secondary)";
+        }
+
+        document.addEventListener('DOMContentLoaded', initGame);
+    </script>
+</body>
+</html>

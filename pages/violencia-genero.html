@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violencia de Género | Instancia Municipal de las Mujeres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .rights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .right-tile {
+            background: white;
+            border: 2px solid var(--color-border);
+            padding: 1.5rem;
+            border-radius: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            min-height: 140px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1rem;
+            line-height: 1.4;
+            box-shadow: var(--shadow-sm);
+        }
+        .right-tile.correct {
+            background: var(--color-primary-dark);
+            color: white;
+            border-color: var(--color-primary);
+            transform: scale(1.05);
+            box-shadow: 0 10px 20px rgba(106, 27, 154, 0.2);
+        }
+        .right-tile.incorrect {
+            background: #fdf2f2;
+            border-color: #f8b4b4;
+            color: #c53030;
+            opacity: 0.7;
+        }
+        .right-tile:hover:not(.correct):not(.incorrect) {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            background: rgba(106, 27, 154, 0.05);
+        }
+        .game-status-bar {
+            background: var(--color-surface);
+            padding: 1rem 2rem;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 1.5rem;
+            margin-bottom: 3rem;
+            border: 1px solid var(--color-border);
+        }
+    </style>
+
+</head>
+<body>
+    <app-header></app-header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero bg-mesh-premium" style="padding: 6rem 0;">
+            <div class="container animate-fade-in">
+                <span class="breadcrumb-label">Educación y Prevención</span>
+                <h1 style="font-size: 3.5rem; letter-spacing: -0.01em; margin-bottom: 1.5rem;">Violencia de Género</h1>
+                <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                    Comprender las causas y manifestaciones de la violencia para erradicarla y construir una sociedad basada en la justicia y el respeto.
+                </p>
+            </div>
+        </section>
+
+        <!-- Objective Section -->
+        <section class="objective-section reveal-scale" style="margin-top: -4rem;">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem; border-radius: 40px;">
+                    <div class="objective-container-premium">
+                        <div class="objective-visual">
+                            <i data-lucide="shield-alert" style="width: 60px; height: 60px; color: var(--color-primary);"></i>
+                        </div>
+                        <div class="objective-content-premium">
+                            <h2 style="font-size: 2.5rem; color: var(--color-primary-dark); margin-bottom: 1.5rem;">Nuestro Compromiso</h2>
+                            <p style="font-size: 1.25rem; line-height: 1.7;">
+                                Informar y sensibilizar sobre la violencia de género como un problema estructural, brindando herramientas de detección temprana y orientación.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Puntos de Reflexión Section -->
+        <section class="section-accent" style="padding: 6rem 0; overflow: hidden; position: relative;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="glass-panel" style="padding: 4rem; border-radius: 40px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 5rem; align-items: center; border: 1px solid rgba(106, 27, 154, 0.15); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);">
+                    <!-- Text/Phrases Side -->
+                    <div class="animate-fade-in" style="animation-delay: 0.1s;">
+                        <span class="breadcrumb-label" style="background: rgba(106, 27, 154, 0.1); color: var(--color-primary); border-color: rgba(106, 27, 154, 0.2); margin-bottom: 2rem;">Puntos de Reflexión</span>
+                        <h2 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 2.5rem; color: var(--color-primary-dark);">Galería de <br><span style="color: var(--color-primary);">Derechos y Libertad</span></h2>
+                        <div class="phrases-container" style="display: grid; gap: 1.5rem;">
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-primary); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"La violencia no es un destino; es una conducta que se puede erradicar."</p>
+                            </div>
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-secondary); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Ninguna mujer merece vivir con miedo. La seguridad es un derecho."</p>
+                            </div>
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-accent); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Romper el silencio es el primer paso hacia la libertad."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Side -->
+                    <div class="video-side-container animate-fade-in" style="animation-delay: 0.3s; display: flex; justify-content: center; position: relative;">
+                        <div style="position: absolute; width: 140%; height: 140%; background: radial-gradient(circle, rgba(106, 27, 154, 0.15) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; pointer-events: none;"></div>
+                        
+                        <div class="video-gallery-container shadow-premium" 
+                             style="max-width: 280px; 
+                                    border-radius: 32px; 
+                                    overflow: hidden; 
+                                    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.4), 0 20px 40px -20px rgba(106, 27, 154, 0.3); 
+                                    background: #000; 
+                                    border: 6px solid #FFFFFF;
+                                    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                    cursor: pointer;
+                                    position: relative;
+                                    z-index: 1;"
+                             onmouseover="this.style.transform='scale(1.05) rotate(1deg)'" 
+                             onmouseout="this.style.transform='scale(1) rotate(0deg)'">
+                            
+                            <video disablePictureInPicture 
+                                   controlsList="nodownload noplaybackrate" 
+                                   onended="this.currentTime=0; this.pause();"
+                                   onclick="this.paused ? this.play() : this.pause();"
+                                   style="width: 100%; display: block; border-radius: 26px; cursor: pointer; transform: scale(1.1);"
+                                   title="Click para reproducir">
+                                <source src="../assets/img/violenciadegenero.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Game: Identificador de Derechos -->
+        <section id="actividad" style="background-color: var(--color-bg); padding: 5rem 0;">
+            <div class="container text-center">
+                <div style="margin-bottom: 3.5rem;">
+                    <span class="breadcrumb-label">🎮 Dinámica de Derechos</span>
+                    <h2 style="font-size: 2.25rem; margin-top: 1.5rem;">El Mosaico de tus Derechos</h2>
+                    <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Identifica y haz clic solo en los enunciados que representen tus derechos fundamentales para iluminar el mosaico.</p>
+                </div>
+
+                <div class="game-status-bar">
+                    <div style="display: flex; align-items: center; gap: 0.5rem;">
+                        <i data-lucide="check-circle" style="color: var(--color-primary); width: 20px;"></i>
+                        <span id="found-count" style="font-weight: 800; color: var(--color-primary-dark);">0</span>
+                        <span>de 6 derechos encontrados</span>
+                    </div>
+                </div>
+
+                <div id="rights-grid" class="rights-grid">
+                    <!-- Tiles will be injected here -->
+                </div>
+
+                <div id="game-complete" style="display: none; margin-top: 4rem;" class="animate-fade-in">
+                    <div class="glass-panel" style="padding: 3rem; border-radius: 32px; max-width: 600px; margin: 0 auto; background: white; border: 2px solid var(--color-primary);">
+                        <h3 style="font-size: 2.2rem; color: var(--color-primary-dark); margin-bottom: 1rem;">¡Derechos Reconocidos! ✨</h3>
+                        <p style="font-size: 1.2rem; color: var(--color-text-muted); margin-bottom: 2.5rem;">Conocer tus derechos es el primer paso para defenderlos. Ninguna tradición o costumbre justifica la vulneración de tu integridad y libertad.</p>
+                        <button onclick="initGame()" class="btn btn-primary" style="padding: 1rem 3rem;">🔄 Reiniciar Mosaico</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <panic-button></panic-button>
+    <app-footer></app-footer>
+
+    <script src="../script.js"></script>
+    <script>
+        const statements = [
+            { text: "Vivir una vida libre de violencia", isRight: true },
+            { text: "Estar callada para evitar problemas", isRight: false },
+            { text: "Tomar mis propias decisiones", isRight: true },
+            { text: "Obedecer sin cuestionar", isRight: false },
+            { text: "Recibir educación y capacitación", isRight: true },
+            { text: "Pagar por mi seguridad", isRight: false },
+            { text: "Ser respetada en todo momento", isRight: true },
+            { text: "Pedir permiso para salir", isRight: false },
+            { text: "Igualdad ante la ley", isRight: true },
+            { text: "Miedo constante", isRight: false },
+            { text: "Acceso a servicios de salud", isRight: true },
+            { text: "Aislamiento de amigos/familia", isRight: false }
+        ];
+
+        let rightsFound = 0;
+        const totalRights = statements.filter(s => s.isRight).length;
+
+        function initGame() {
+            rightsFound = 0;
+            document.getElementById('found-count').textContent = "0";
+            document.getElementById('game-complete').style.display = 'none';
+            const grid = document.getElementById('rights-grid');
+            grid.innerHTML = '';
+            
+            const shuffled = [...statements].sort(() => Math.random() - 0.5);
+            
+            shuffled.forEach(s => {
+                const tile = document.createElement('div');
+                tile.className = 'right-tile';
+                tile.textContent = s.text;
+                
+                tile.onclick = () => {
+                    if (tile.classList.contains('correct') || tile.classList.contains('incorrect')) return;
+                    
+                    if (s.isRight) {
+                        tile.classList.add('correct');
+                        rightsFound++;
+                        document.getElementById('found-count').textContent = rightsFound;
+                        
+                        if (rightsFound === totalRights) {
+                            setTimeout(() => {
+                                document.getElementById('game-complete').style.display = 'block';
+                                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                            }, 500);
+                        }
+                    } else {
+                        tile.classList.add('incorrect');
+                        setTimeout(() => tile.classList.remove('incorrect'), 1000);
+                    }
+                };
+                grid.appendChild(tile);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initGame);
+    </script>
+</body>
+</html>

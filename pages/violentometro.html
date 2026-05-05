@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violentómetro | Instancia Municipal de las Mujeres</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        /* Special Institutional Strip Styles */
+        .institutional-strip {
+            max-width: 550px;
+            margin: 0 auto;
+            background: #6B1B36;
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            color: white;
+            font-family: 'Outfit', sans-serif;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.4);
+        }
+
+        .v-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+            padding: 0.5rem 0;
+            cursor: pointer;
+            transition: transform 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        .v-item:hover {
+            transform: translateX(-15px);
+        }
+
+        .v-label {
+            font-size: 1.15rem;
+            font-weight: 700;
+            text-align: right;
+            opacity: 0.95;
+            line-height: 1.2;
+        }
+
+        .v-line {
+            width: 45px;
+            height: 3px;
+            background: white;
+            flex-shrink: 0;
+        }
+
+        .warning-label {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            height: 33.33%;
+            width: 100%;
+            padding: 0;
+            position: relative;
+            overflow: visible;
+        }
+
+        .warning-label span {
+            display: block;
+            transform: rotate(-90deg);
+            white-space: nowrap;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            color: rgba(255, 255, 255, 0.9);
+            width: max-content;
+        }
+
+        .divider-bracket {
+            position: absolute;
+            left: 30px;
+            width: 70px;
+            height: 2px;
+            background: white;
+            z-index: 5;
+        }
+
+        @media (max-width: 600px) {
+            .v-label { font-size: 0.9rem; }
+            .v-line { width: 25px; }
+            .institutional-strip { max-width: 100%; border-radius: 0; }
+        }
+    </style>
+</head>
+
+<body>
+    <app-header></app-header>
+
+    <main>
+        <section class="page-hero">
+            <div class="container animate-fade-in">
+                <div style="display: flex; justify-content: center; margin-bottom: 1.5rem;">
+                    <div style="background: rgba(255, 255, 255, 0.2); width: 80px; height: 80px; border-radius: 50%; display: flex; align-items: center; justify-content: center;">
+                        <i data-lucide="thermometer-sun" style="width: 40px; height: 40px; color: var(--color-hero-text);"></i>
+                    </div>
+                </div>
+                <h1>Violentómetro</h1>
+                <p>La violencia también se mide. Identifica las señales de alerta con nuestra herramienta institucional.</p>
+                <div style="margin-top: 2rem;">
+                    <button onclick="downloadViolentometroPDF(event)" class="btn btn-secondary">
+                        <i data-lucide="download" style="width: 20px; height: 20px;"></i>
+                        Descargar en PDF para guardar o imprimir
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-padding" style="background-color: #f8f9fa;">
+            <div class="container animate-fade-in">
+                <div class="text-center" style="margin-bottom: 3rem;">
+                    <h2 style="color: var(--color-primary-dark);">Versión Institucional Ofical</h2>
+                    <p style="max-width: 700px; margin: 0 auto;">Este diseño es una réplica exacta del material utilizado por el <strong>Gobierno de Tulancingo</strong>. Haz clic en las conductas para conocer más.</p>
+                </div>
+
+                <!-- INSTITUTIONAL STRIP -->
+                <div id="violContainer" class="institutional-strip">
+                    
+                    <!-- GOLD HEADER -->
+                    <div style="background: #B5A264; padding: 1.5rem; text-align: center;">
+                        <h2 style="margin: 0; font-size: 1.8rem; letter-spacing: 3px; font-weight: 800; text-transform: uppercase; color: white;">Violentómetro</h2>
+                    </div>
+
+                    <!-- SLOGAN BAR -->
+                    <div style="background: #801E37; padding: 0.5rem; text-align: center; border-bottom: 3px solid #B5A264;">
+                        <p style="margin: 0; font-weight: 700; font-style: italic; font-size: 1rem;">Sí, la violencia también se mide...</p>
+                    </div>
+
+                    <!-- STRIP CONTENT -->
+                    <div style="display: flex; min-height: 1350px; background: linear-gradient(to bottom, #A61F36 0%, #6B1B36 40%, #4D0F21 100%); padding: 1.5rem 0.5rem; position: relative;">
+                        
+                        <!-- SECTION DIVIDERS (BRACKETS) -->
+                        <div class="divider-bracket" style="top: 34%;"></div>
+                        <div class="divider-bracket" style="top: 68%;"></div>
+
+                        <!-- LEFT LABELS -->
+                        <div style="width: 45px; display: flex; flex-direction: column; color: rgba(255,255,255,0.75); text-transform: uppercase;">
+                            <div class="warning-label"><span>¡Necesitas ayuda profesional!</span></div>
+                            <div class="warning-label"><span>¡Reacciona! No te dejes destruir</span></div>
+                            <div class="warning-label"><span>¡Ten cuidado! La violencia continuará</span></div>
+                        </div>
+
+                        <!-- MIDDLE LIST -->
+                        <div style="flex: 1; padding: 0 1rem; position: relative; z-index: 2;">
+                            <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; height: 100%; justify-content: space-between;">
+                                <li class="v-item" data-title="Asesinar" data-example="Feminicidio: El grado máximo de violencia. Un desenlace que suele ser antecedido por todas las fases anteriores ignoradas.">
+                                    <span class="v-label" style="color: #FFEB3B; font-size: 1.3rem;">Asesinar</span><div class="v-line" style="background: #FFEB3B;"></div>
+                                </li>
+                                <li class="v-item" data-title="Mutilar" data-example="Causar lesiones permanentes, desfigurar o usar fuego/ácidos para dañar el cuerpo.">
+                                    <span class="v-label">Mutilar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Violar" data-example="Penetración sexual forzada física o psicológicamente, o bajo efectos de sustancias.">
+                                    <span class="v-label">Violar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Abusar sexualmente" data-example="Contacto sexual no deseado, acoso o manipulación para obtener actos sexuales.">
+                                    <span class="v-label">Abusar sexualmente</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Amenazar con objetos o armas" data-example="Uso de cuchillos, pistolas u objetos contundentes para generar miedo extremo.">
+                                    <span class="v-label">Amenazar con objetos o armas</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Encerrar, aislar" data-example="Impedir que salgas de casa, quitarte las llaves o prohibirte ver a familiares.">
+                                    <span class="v-label">Encerrar, aislar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Patear" data-example="Golpes con los pies dirigidos a cualquier parte del cuerpo con intención de herir.">
+                                    <span class="v-label">Patear</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Cachetear" data-example="Bofetadas en el rostro como forma de castigo o humillación física.">
+                                    <span class="v-label">Cachetear</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Empujar" data-example="Aventar contra paredes o muebles para intimidar o causar dolor físico.">
+                                    <span class="v-label">Empujar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Jalonear, pellizcar, arañar" data-example="Agresiones físicas que dejan marcas o moretones bajo el pretexto de estar enojado.">
+                                    <span class="v-label">Jalonear, pellizcar, arañar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Golpear 'jugando'" data-example="Golpes reales disfrazados de juego; si pides que pare, te acusa de no aguantar nada.">
+                                    <span class="v-label">Golpear "jugando"</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Caricias agresivas" data-example="Abrazos que asfixian o apretones fuertes que lastiman pero se llaman 'amor'.">
+                                    <span class="v-label">Caricias agresivas</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Manosear" data-example="Tocar partes íntimas sin consentimiento, invadiendo el espacio personal.">
+                                    <span class="v-label">Manosear</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Destruir artículos personales" data-example="Romper tu celular, quemar tu ropa o dañar cosas que valoras.">
+                                    <span class="v-label">Destruir artículos personales</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Controlar, prohibir" data-example="Revisar tu celular, prohibirte ver a tus amigas o decidir cómo debes vestirte.">
+                                    <span class="v-label">Controlar, prohibir</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Intimidar, amenazar" data-example="Amenazar con dejarte, quitarte a tus hijos o golpearte.">
+                                    <span class="v-label">Intimidar, amenazar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Humillar en público" data-example="Insultarte o burlarse de ti frente a familia o amigos para que te sientas inferior.">
+                                    <span class="v-label">Humillar en público</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Ridiculizar, ofender" data-example="Ponerte apodos hirientes sobre tu físico o inteligencia bajo el nombre de 'broma'.">
+                                    <span class="v-label">Ridiculizar, ofender</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Descalificar" data-example="Minimizar tus logros o decirte que no sirves para nada de forma constante.">
+                                    <span class="v-label">Descalificar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Culpabilizar" data-example="Hacerte sentir que todo lo malo que pasa en la relación es culpa tuya.">
+                                    <span class="v-label">Culpabilizar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Celar, ignorar / ley de hielo" data-example="Castigarte con el silencio durante días o vigilar cada movimiento.">
+                                    <span class="v-label">Celar, ignorar / ley de hielo</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Mentir, engañar" data-example="Traicionar la confianza sistemáticamente o inventar realidades.">
+                                    <span class="v-label">Mentir, engañar</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Chantajear" data-example="Usar la culpa o amenazas de autolesión para obligarte a hacer cosas.">
+                                    <span class="v-label">Chantajear</span><div class="v-line"></div>
+                                </li>
+                                <li class="v-item" data-title="Bromas hirientes" data-example="Comentarios sarcásticos que te lastiman, seguidos de un 'era solo una broma'.">
+                                    <span class="v-label">Bromas hirientes</span><div class="v-line"></div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <!-- THERMOMETER -->
+                        <div style="width: 70px; position: relative; margin-right: 1.5rem;">
+                            <!-- Tube -->
+                            <div style="position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 35px; height: 92%; background: rgba(255,255,255,0.1); border: 4px solid white; border-radius: 25px; overflow: hidden;">
+                                <div style="position: absolute; bottom: 0; width: 100%; height: 100%; background: linear-gradient(to top, #FFD600 0%, #FF9100 30%, #FF3D00 60%, #D50000 100%);"></div>
+                            </div>
+                            <!-- Bulb -->
+                            <div style="position: absolute; bottom: 3%; left: 50%; transform: translateX(-50%); width: 60px; height: 60px; background: #FFD600; border: 6px solid white; border-radius: 50%; z-index: 10;"></div>
+                        </div>
+                    </div>
+
+                    <!-- FOOTER MSG -->
+                    <div style="padding: 1.5rem; text-align: center; border-top: 1px solid rgba(255,255,255,0.1); background: rgba(0,0,0,0.15);">
+                        <p style="margin: 0; font-size: 1.3rem; font-weight: 800; text-transform: uppercase; line-height: 1.1;">¡Ningún tipo de violencia debe de ser permitido!</p>
+                    </div>
+
+                    <!-- LOGOS -->
+                    <div style="background: #f8f9fa; padding: 1rem; display: flex; justify-content: space-between; align-items: center; border-radius: 0 0 15px 15px;">
+                        <div style="display: flex; align-items: center; gap: 0.75rem; color: #6b1d31; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; line-height: 1.1;">
+                            <img src="../assets/img/logo.png" alt="Logo Tulancingo" style="height: 60px; object-fit: contain;">
+                            <div>Instancia de<br>la Mujer</div>
+                        </div>
+                        <div style="display: flex; align-items: center; gap: 0.75rem; color: #6b1d31; font-size: 0.65rem; font-weight: 800; text-transform: uppercase; line-height: 1.1; text-align: right;">
+                            <div>Órgano Interno<br>de Control</div>
+                            <img src="../assets/img/logo.png" alt="Logo Tulancingo" style="height: 60px; object-fit: contain;">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <panic-button></panic-button>
+    <app-footer></app-footer>
+
+    <div id="exampleModal" class="modal-overlay">
+        <div class="modal-content-box">
+            <button id="closeModalBtn" class="modal-close">&times;</button>
+            <h3 id="modalTitle" class="modal-example-title text-primary">Conducta Detectada</h3>
+            <p id="modalBody" class="modal-example-text">Ejemplo aquí.</p>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const listItems = document.querySelectorAll('.v-item');
+            const modal = document.getElementById('exampleModal');
+            const modalTitle = document.getElementById('modalTitle');
+            const modalBody = document.getElementById('modalBody');
+            const closeBtn = document.getElementById('closeModalBtn');
+
+            listItems.forEach(item => {
+                item.addEventListener('click', () => {
+                    const title = item.getAttribute('data-title');
+                    const example = item.getAttribute('data-example');
+                    if (title && example) {
+                        modalTitle.innerText = title;
+                        modalBody.innerText = example;
+                        modal.classList.add('active');
+                    }
+                });
+            });
+
+            closeBtn.addEventListener('click', () => modal.classList.remove('active'));
+            modal.addEventListener('click', (e) => { if (e.target === modal) modal.classList.remove('active'); });
+        });
+
+        async function downloadViolentometroPDF(event) {
+            const btn = event.currentTarget;
+            btn.disabled = true;
+            btn.innerHTML = 'Generando...';
+            
+            const element = document.getElementById('violContainer');
+            
+            // Get dimensions to create a perfectly sized single page
+            const width = element.offsetWidth;
+            const height = element.offsetHeight;
+            const ratio = height / width;
+            
+            // We'll map this to a standard-width PDF (e.g. 210mm like A4) but with custom height
+            const pdfWidth = 210;
+            const pdfHeight = 210 * ratio;
+
+            const opt = {
+                margin:       0,
+                filename:     'Violentometro_Institucional_IMM.pdf',
+                image:        { type: 'jpeg', quality: 1 },
+                html2canvas:  { 
+                    scale: 2, 
+                    useCORS: true,
+                    scrollY: 0
+                },
+                jsPDF:        { 
+                    unit: 'mm', 
+                    format: [pdfWidth, pdfHeight], 
+                    orientation: 'portrait' 
+                }
+            };
+
+            try {
+                await html2pdf().set(opt).from(element).save();
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al generar el PDF.');
+            } finally {
+                btn.disabled = false;
+                btn.innerHTML = '<i data-lucide="download"></i> Descargar PDF';
+                if (window.lucide) lucide.createIcons();
+            }
+        }
+    </script>
+</body>
+</html>

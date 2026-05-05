@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violencia en el Noviazgo | Instancia Municipal de las Mujeres</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Outfit:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <style>
+        .traffic-light {
+            background: #333;
+            width: 100px;
+            padding: 20px;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin: 0 auto;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+        .light {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: #222;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            border: 4px solid rgba(255,255,255,0.1);
+        }
+        .light.red.active { background: #ff4d4d; box-shadow: 0 0 30px #ff4d4d; border-color: white; }
+        .light.yellow.active { background: #ffcc00; box-shadow: 0 0 30px #ffcc00; border-color: white; }
+        .light.green.active { background: #2ecc71; box-shadow: 0 0 30px #2ecc71; border-color: white; }
+        
+        .light:hover { transform: scale(1.1); }
+        
+        .light-label {
+            position: absolute;
+            left: 80px;
+            top: 50%;
+            transform: translateY(-50%);
+            white-space: nowrap;
+            font-weight: 700;
+            font-size: 0.9rem;
+            opacity: 0.6;
+            color: var(--color-text);
+        }
+        .light.active .light-label { opacity: 1; color: var(--color-primary-dark); }
+    </style>
+</head>
+<body>
+    <app-header></app-header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="page-hero bg-mesh-premium" style="padding: 6rem 0;">
+            <div class="container animate-fade-in">
+                <span class="breadcrumb-label">Educación y Prevención</span>
+                <h1 style="font-size: 3.5rem; letter-spacing: -0.01em; margin-bottom: 1.5rem;">Violencia en el Noviazgo</h1>
+                <p style="font-size: 1.25rem; max-width: 700px; margin: 0 auto; line-height: 1.6;">
+                    Identificar las señales de alerta y fomentar relaciones basadas en el respeto desde las primeras etapas.
+                </p>
+            </div>
+        </section>
+
+        <!-- Objective Section -->
+        <section class="objective-section reveal-scale" style="margin-top: -4rem;">
+            <div class="container">
+                <div class="glass-panel" style="padding: 4rem; border-radius: 40px;">
+                    <div class="objective-container-premium">
+                        <div class="objective-visual">
+                            <i data-lucide="heart-handshake" style="width: 60px; height: 60px; color: var(--color-primary);"></i>
+                        </div>
+                        <div class="objective-content-premium">
+                            <h2 style="font-size: 2.5rem; color: var(--color-primary-dark); margin-bottom: 1.5rem;">Nuestro Compromiso</h2>
+                            <p style="font-size: 1.25rem; line-height: 1.7;">
+                                Proporcionar herramientas para identificar conductas de control y promover vínculos afectivos sanos y respetuosos.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Puntos de Reflexión Section -->
+        <section class="section-accent" style="padding: 6rem 0; overflow: hidden; position: relative;">
+            <div class="container" style="position: relative; z-index: 10;">
+                <div class="glass-panel" style="padding: 4rem; border-radius: 40px; display: grid; grid-template-columns: 1.25fr 1fr; gap: 5rem; align-items: center; border: 1px solid rgba(106, 27, 154, 0.15); box-shadow: 0 40px 100px -20px rgba(0, 0, 0, 0.1);">
+                    <!-- Text/Phrases Side -->
+                    <div class="animate-fade-in" style="animation-delay: 0.1s;">
+                        <span class="breadcrumb-label" style="background: rgba(106, 27, 154, 0.1); color: var(--color-primary); border-color: rgba(106, 27, 154, 0.2); margin-bottom: 2rem;">Puntos de Reflexión</span>
+                        <h2 style="font-size: 2.8rem; line-height: 1.1; margin-bottom: 2.5rem; color: var(--color-primary-dark);">Galería de <br><span style="color: var(--color-primary);">Vínculos Sanos</span></h2>
+                        <div class="phrases-container" style="display: grid; gap: 1.5rem;">
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-primary); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"El amor no duele, no controla y no humilla."</p>
+                            </div>
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-secondary); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Quien te quiere bien, te quiere libre."</p>
+                            </div>
+                            <div class="glass-panel" style="padding: 1.25rem 1.75rem; border-radius: var(--border-radius-lg); position: relative; border: 1px solid var(--color-border); background: white; box-shadow: var(--shadow-sm);">
+                                <div style="position: absolute; left: 0; top: 0; bottom: 0; width: 6px; background: var(--color-accent); border-radius: 0 4px 4px 0;"></div>
+                                <p style="margin: 0; font-size: 1.1rem; font-weight: 600; font-style: italic;">"Si te hace elegir entre tú y el amor, elige siempre a ti."</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Video Side -->
+                    <div class="video-side-container animate-fade-in" style="animation-delay: 0.3s; display: flex; justify-content: center; position: relative;">
+                        <div style="position: absolute; width: 140%; height: 140%; background: radial-gradient(circle, rgba(106, 27, 154, 0.15) 0%, transparent 70%); top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 0; pointer-events: none;"></div>
+                        
+                        <div class="video-gallery-container shadow-premium" 
+                             style="max-width: 280px; 
+                                    border-radius: 32px; 
+                                    overflow: hidden; 
+                                    box-shadow: 0 40px 80px -15px rgba(0, 0, 0, 0.4), 0 20px 40px -20px rgba(106, 27, 154, 0.3); 
+                                    background: #000; 
+                                    border: 6px solid #FFFFFF;
+                                    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+                                    cursor: pointer;
+                                    position: relative;
+                                    z-index: 1;"
+                             onmouseover="this.style.transform='scale(1.05) rotate(1deg)'" 
+                             onmouseout="this.style.transform='scale(1) rotate(0deg)'">
+                            
+                            <video disablePictureInPicture 
+                                   controlsList="nodownload noplaybackrate" 
+                                   onended="this.currentTime=0; this.pause();"
+                                   onclick="this.paused ? this.play() : this.pause();"
+                                   style="width: 100%; display: block; border-radius: 26px; cursor: pointer; transform: scale(1.1);"
+                                   title="Click para reproducir">
+                                <source src="../assets/img/violenciaenelnoviazgo.mp4" type="video/mp4">
+                                Tu navegador no soporta el elemento de video.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Interactive Game: Semáforo del Noviazgo -->
+        <section id="actividad" style="background-color: var(--color-bg); padding: 5rem 0;">
+            <div class="container">
+                <div class="text-center" style="margin-bottom: 4rem;">
+                    <span class="breadcrumb-label">🎮 Dinámica de Alerta</span>
+                    <h2 style="font-size: 2.25rem; margin-top: 1.5rem;">Semáforo del Noviazgo</h2>
+                    <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Evalúa las situaciones y activa la luz que corresponda: Verde (Sano), Amarillo (Alerta) o Rojo (Violencia).</p>
+                </div>
+
+                <div id="game-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 900px; margin: 0 auto; align-items: center;">
+                    
+                    <!-- Traffic Light UI -->
+                    <div style="position: relative;">
+                        <div class="traffic-light">
+                            <div id="light-red" class="light red" onclick="selectLight('rojo')">
+                                <span class="light-label">VIOLENCIA</span>
+                            </div>
+                            <div id="light-yellow" class="light yellow" onclick="selectLight('amarillo')">
+                                <span class="light-label">ALERTA</span>
+                            </div>
+                            <div id="light-green" class="light green" onclick="selectLight('verde')">
+                                <span class="light-label">SANO</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Scenario Card -->
+                    <div id="scenario-card" class="glass-panel" style="padding: 2.5rem; border-radius: 28px; background: white; border: 1px solid var(--color-border);">
+                        <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between;">
+                            <span id="progress-text" style="font-weight: 700; color: var(--color-primary);">Situación 1 de 5</span>
+                        </div>
+                        <p id="scenario-text" style="font-size: 1.3rem; font-weight: 600; line-height: 1.5; margin-bottom: 2rem; min-height: 5rem;">Cargando...</p>
+                        
+                        <div id="feedback-box" style="display: none; padding: 1.5rem; border-radius: 16px; margin-top: 1rem; font-size: 1rem; line-height: 1.5;">
+                            <!-- Feedback here -->
+                        </div>
+
+                        <button id="next-btn" onclick="nextScenario()" style="display: none; width: 100%; margin-top: 2rem;" class="btn btn-primary">Siguiente situación →</button>
+                    </div>
+                </div>
+
+                <div id="game-results" style="display: none; text-align: center; max-width: 600px; margin: 0 auto;">
+                    <div class="glass-panel" style="padding: 4rem; border-radius: 32px; background: white;">
+                        <div id="res-emoji" style="font-size: 5rem; margin-bottom: 1.5rem;">🚦</div>
+                        <h3 id="res-title" style="font-size: 2.2rem; margin-bottom: 1rem;">¡Dinámica Completada!</h3>
+                        <p id="res-message" style="font-size: 1.2rem; color: var(--color-text-muted); margin-bottom: 2.5rem;"></p>
+                        <button onclick="initGame()" class="btn btn-primary" style="padding: 1rem 3rem;">🔄 Reiniciar Dinámica</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <panic-button></panic-button>
+    <app-footer></app-footer>
+
+    <script src="../script.js"></script>
+    <script>
+        const signals = [
+            { text: "Tu pareja apoya tus sueños, estudios y metas personales, celebrando tus logros.", type: "verde", explain: "El apoyo mutuo y el crecimiento personal son bases de una relación sana." },
+            { text: "Te pide contraseñas de tus redes sociales para 'demostrar que no ocultas nada'.", type: "amarillo", explain: "El control digital y la invasión a la privacidad son señales claras de alerta." },
+            { text: "En una discusión, te jalonea del brazo o te impide salir de la habitación.", type: "rojo", explain: "Cualquier contacto físico forzado o restricción de movimiento es violencia física." },
+            { text: "Se burla de ti o te humilla frente a tus amigos o familiares 'como broma'.", type: "rojo", explain: "La humillación pública y las burlas constantes son formas de violencia psicológica." },
+            { text: "Respetan sus tiempos individuales y que cada quien tenga sus propias amistades.", type: "verde", explain: "Mantener la individualidad y los espacios propios fortalece el vínculo afectivo." }
+        ];
+
+        let index = 0;
+        let score = 0;
+        let canInteract = true;
+
+        function initGame() {
+            index = 0;
+            score = 0;
+            canInteract = true;
+            document.getElementById('game-grid').style.display = 'grid';
+            document.getElementById('game-results').style.display = 'none';
+            resetLights();
+            showScenario();
+        }
+
+        function resetLights() {
+            document.querySelectorAll('.light').forEach(l => l.classList.remove('active'));
+        }
+
+        function showScenario() {
+            canInteract = true;
+            resetLights();
+            const s = signals[index];
+            document.getElementById('scenario-text').textContent = s.text;
+            document.getElementById('progress-text').textContent = `Situación ${index + 1} de ${signals.length}`;
+            document.getElementById('feedback-box').style.display = 'none';
+            document.getElementById('next-btn').style.display = 'none';
+        }
+
+        function selectLight(type) {
+            if (!canInteract) return;
+            canInteract = false;
+
+            resetLights();
+            document.getElementById(`light-${type === 'rojo' ? 'red' : type === 'amarillo' ? 'yellow' : 'green'}`).classList.add('active');
+
+            const s = signals[index];
+            const isCorrect = type === s.type;
+            if (isCorrect) score++;
+
+            const fb = document.getElementById('feedback-box');
+            fb.style.display = 'block';
+            fb.style.background = isCorrect ? 'rgba(46, 125, 50, 0.1)' : 'rgba(211, 47, 47, 0.1)';
+            fb.style.color = isCorrect ? '#2e7d32' : '#d32f2f';
+            fb.innerHTML = `<strong>${isCorrect ? '¡Correcto!' : 'Atención...'}</strong><br>${s.explain}`;
+
+            document.getElementById('next-btn').style.display = 'block';
+            document.getElementById('next-btn').textContent = index < signals.length - 1 ? "Siguiente situación →" : "Ver resultados Finales";
+        }
+
+        function nextScenario() {
+            index++;
+            if (index >= signals.length) {
+                finishGame();
+            } else {
+                showScenario();
+            }
+        }
+
+        function finishGame() {
+            document.getElementById('game-grid').style.display = 'none';
+            document.getElementById('game-results').style.display = 'block';
+            
+            const msg = document.getElementById('res-message');
+            const tit = document.getElementById('res-title');
+            const emo = document.getElementById('res-emoji');
+
+            if (score === signals.length) {
+                emo.textContent = "💚";
+                tit.textContent = "¡Experto/a en Alertas!";
+                msg.textContent = "Tienes una gran claridad para identificar relaciones sanas y señales de violencia. ¡Sigue promoviendo el respeto!";
+            } else if (score >= 3) {
+                emo.textContent = "💛";
+                tit.textContent = "Buen Identificador";
+                msg.textContent = `Lograste identificar ${score} situaciones correctamente. Sigue aprendiendo para proteger tu bienestar emocional.`;
+            } else {
+                emo.textContent = "🛑";
+                tit.textContent = "Sigamos Reforzando";
+                msg.textContent = "Es vital aprender a identificar el control como violencia. Estamos aquí para orientarte y apoyarte siempre.";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', initGame);
+    </script>
+</body>
+</html>
