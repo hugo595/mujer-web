@@ -1715,4 +1715,20 @@ img {
   background: inherit;
   border-radius: 0 0 50% 50% / 0 0 100% 100%;
 }
+
+/* Ajustes de fuente para transporte en móvil */
+@media (max-width: 768px) {
+  .transport-card h3 {
+    font-size: 1.1rem !important;
+    margin-bottom: 0.5rem !important;
+  }
+  .transport-card div {
+    font-size: 0.8rem !important;
+    gap: 0.4rem !important;
+  }
+  .transport-card i {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
 }
