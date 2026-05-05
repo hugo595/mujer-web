@@ -284,7 +284,9 @@
 
         function finishGame() {
             document.getElementById('game-grid').style.display = 'none';
+            document.getElementById('scenario-card').style.display = 'none';
             document.getElementById('game-results').style.display = 'block';
+            document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
             
             const msg = document.getElementById('res-message');
             const tit = document.getElementById('res-title');

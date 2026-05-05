@@ -334,7 +334,9 @@
 
         function finishGame() {
             document.getElementById('game-viewport').style.display = 'none';
+            document.getElementById('scenario-card').style.display = 'none';
             document.getElementById('game-results').style.display = 'block';
+            document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
             document.getElementById('thermo-fill').style.transform = 'scaleY(0)';
             document.getElementById('level-label').textContent = "CALMA";
             document.getElementById('level-label').style.color = "var(--color-secondary)";

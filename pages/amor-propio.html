@@ -289,6 +289,9 @@
             document.getElementById('quiz-card').style.display = 'none';
             document.getElementById('quiz-results').style.display = 'block';
 
+            // Ensure we stay at the top of the game section
+            document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
+
             const pct = score / shuffledData.length;
             let emoji, title, message;
 
@@ -313,7 +316,8 @@
         }
 
         function restartQuiz() {
-            startQuiz();
+            window.location.href = window.location.pathname + '#actividad';
+            window.location.reload();
         }
 
         document.addEventListener('DOMContentLoaded', startQuiz);

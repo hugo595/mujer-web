@@ -212,6 +212,7 @@
         function finishGame() {
             document.getElementById('scenario-card').style.display = 'none';
             document.getElementById('game-results').style.display = 'block';
+            document.getElementById('actividad').scrollIntoView({ behavior: 'smooth' });
             
             const title = document.getElementById('results-title');
             const message = document.getElementById('results-message');
