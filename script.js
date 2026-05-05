@@ -208,36 +208,50 @@ class AppHeader extends HTMLElement {
         }
 
         @media (max-width: 992px) {
-          .header-container { padding: 0 1.2rem; }
+          .header-container { padding: 0 1.2rem; flex-wrap: wrap; }
           .logo-area { margin-left: 0; height: 60px; }
           .logo-img { height: 100px; margin-top: 0; }
           .main-nav {
             display: none;
-            position: absolute;
-            top: 100%;
-            left: 0;
-            right: 0;
-            background: var(--color-surface);
-            flex-direction: column;
-            padding: 1.5rem;
-            box-shadow: var(--shadow-lg);
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 0.5rem 0.8rem;
+            gap: 0.4rem;
             border-top: 1px solid var(--color-border);
-            gap: 1rem;
+            background: var(--color-surface);
+            order: 3;
           }
           .main-nav.active { display: flex; }
           .mobile-toggle { display: block; }
+          .nav-link {
+            font-size: 0.78rem !important;
+            padding: 0.35rem 0.75rem !important;
+          }
+          .btn-contact {
+            font-size: 0.78rem !important;
+            padding: 0.35rem 0.75rem !important;
+            gap: 0.3rem !important;
+          }
+          .btn-contact i { width: 14px !important; height: 14px !important; }
           .dropdown-menu {
-            position: static;
+            position: absolute;
             transform: none;
             opacity: 1;
             visibility: visible;
             display: none;
-            width: 100%;
-            box-shadow: none;
-            border: none;
-            padding-left: 1rem;
+            width: 220px;
+            box-shadow: var(--shadow-lg);
+            border: 1px solid var(--color-border);
+            padding-left: 0;
+            top: auto;
+            left: 0;
+            z-index: 1000;
           }
           .dropdown.active .dropdown-menu { display: block; }
+          .dropdown { position: relative; }
         }
       </style>
 
