@@ -54,6 +54,26 @@
             font-weight: 700;
             text-transform: uppercase;
         }
+        @media (max-width: 768px) {
+            .emociones-grid {
+                grid-template-columns: 80px 1fr !important;
+                gap: 1.5rem !important;
+                align-items: start !important;
+            }
+            .thermometer-container {
+                height: 200px !important;
+                width: 60px !important;
+                margin-bottom: 1rem !important;
+            }
+            #level-label {
+                font-size: 0.9rem !important;
+            }
+            .strategy-btn {
+                padding: 0.8rem !important;
+                font-size: 0.85rem !important;
+                gap: 0.6rem !important;
+            }
+        }
     </style>
 
 </head>
@@ -159,7 +179,12 @@
                     <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Aprende a enfriar tus emociones intensas eligiendo la estrategia de regulación adecuada para cada nivel.</p>
                 </div>
 
-                <div id="game-viewport" style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; max-width: 900px; margin: 0 auto; align-items: center;">
+                <div id="scenario-box" class="glass-panel" style="padding: 2rem; border-radius: 24px; margin-bottom: 2rem; background: white; max-width: 900px; margin: 0 auto 2rem;">
+                    <div id="intensity-badge" class="intensity-tag" style="background: rgba(244, 67, 54, 0.1); color: #f44336; margin-bottom: 1rem; display: inline-block;">Nivel 4: Muy Intenso</div>
+                    <p id="scenario-text" style="font-size: 1.2rem; font-weight: 600; line-height: 1.5;">Cargando situación...</p>
+                </div>
+
+                <div id="game-viewport" class="emociones-grid" style="display: grid; grid-template-columns: 1fr 2fr; gap: 4rem; max-width: 900px; margin: 0 auto; align-items: center;">
                     
                     <!-- Thermometer Visual -->
                     <div class="text-center">
@@ -171,11 +196,6 @@
 
                     <!-- Game Control Area -->
                     <div id="game-controls">
-                        <div id="scenario-box" class="glass-panel" style="padding: 2rem; border-radius: 24px; margin-bottom: 2rem; background: white;">
-                            <div id="intensity-badge" class="intensity-tag" style="background: rgba(244, 67, 54, 0.1); color: #f44336; margin-bottom: 1rem; display: inline-block;">Nivel 4: Muy Intenso</div>
-                            <p id="scenario-text" style="font-size: 1.2rem; font-weight: 600; line-height: 1.5;">Cargando situación...</p>
-                        </div>
-
                         <div id="strategies-list" style="display: grid; gap: 1rem;">
                             <!-- Buttons injected by JS -->
                         </div>
