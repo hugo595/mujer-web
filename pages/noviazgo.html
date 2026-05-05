@@ -48,6 +48,24 @@
             color: var(--color-text);
         }
         .light.active .light-label { opacity: 1; color: var(--color-primary-dark); }
+        @media (max-width: 768px) {
+            #game-grid {
+                grid-template-columns: 1fr !important;
+                gap: 2rem !important;
+            }
+            .traffic-light {
+                width: 90px !important;
+                padding: 15px !important;
+            }
+            .light {
+                width: 50px !important;
+                height: 50px !important;
+            }
+            .light-label {
+                left: 65px !important;
+                font-size: 0.8rem !important;
+            }
+        }
     </style>
 </head>
 <body>
@@ -150,10 +168,23 @@
                     <p class="text-muted" style="max-width: 650px; margin: 0 auto;">Evalúa las situaciones y activa la luz que corresponda: Verde (Sano), Amarillo (Alerta) o Rojo (Violencia).</p>
                 </div>
 
+                <!-- Scenario Card -->
+                <div id="scenario-card" class="glass-panel" style="padding: clamp(1.5rem, 4vw, 2.5rem); border-radius: 28px; background: white; border: 1px solid var(--color-border); max-width: 900px; margin: 0 auto 2rem;">
+                    <div style="margin-bottom: 1rem; display: flex; justify-content: space-between;">
+                        <span id="progress-text" style="font-weight: 700; color: var(--color-primary);">Situación 1 de 5</span>
+                    </div>
+                    <p id="scenario-text" style="font-size: clamp(1.1rem, 3vw, 1.3rem); font-weight: 600; line-height: 1.5; margin-bottom: 1rem; min-height: 4rem;">Cargando...</p>
+                    
+                    <div id="feedback-box" style="display: none; padding: 1.5rem; border-radius: 16px; margin-top: 1rem; font-size: 1rem; line-height: 1.5;">
+                        <!-- Feedback here -->
+                    </div>
+
+                    <button id="next-btn" onclick="nextScenario()" style="display: none; width: 100%; margin-top: 2rem;" class="btn btn-primary">Siguiente situación →</button>
+                </div>
+
                 <div id="game-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; max-width: 900px; margin: 0 auto; align-items: center;">
                     
-                    <!-- Traffic Light UI -->
-                    <div style="position: relative;">
+                    <div style="position: relative; display: flex; justify-content: center;">
                         <div class="traffic-light">
                             <div id="light-red" class="light red" onclick="selectLight('rojo')">
                                 <span class="light-label">VIOLENCIA</span>
@@ -165,20 +196,6 @@
                                 <span class="light-label">SANO</span>
                             </div>
                         </div>
-                    </div>
-
-                    <!-- Scenario Card -->
-                    <div id="scenario-card" class="glass-panel" style="padding: 2.5rem; border-radius: 28px; background: white; border: 1px solid var(--color-border);">
-                        <div style="margin-bottom: 1.5rem; display: flex; justify-content: space-between;">
-                            <span id="progress-text" style="font-weight: 700; color: var(--color-primary);">Situación 1 de 5</span>
-                        </div>
-                        <p id="scenario-text" style="font-size: 1.3rem; font-weight: 600; line-height: 1.5; margin-bottom: 2rem; min-height: 5rem;">Cargando...</p>
-                        
-                        <div id="feedback-box" style="display: none; padding: 1.5rem; border-radius: 16px; margin-top: 1rem; font-size: 1rem; line-height: 1.5;">
-                            <!-- Feedback here -->
-                        </div>
-
-                        <button id="next-btn" onclick="nextScenario()" style="display: none; width: 100%; margin-top: 2rem;" class="btn btn-primary">Siguiente situación →</button>
                     </div>
                 </div>
 
