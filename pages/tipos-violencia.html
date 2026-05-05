@@ -370,13 +370,7 @@
             }
 
             function resetGame() {
-                matchesFound = 0;
-                selectedCategory = null;
-                selectedDefinition = null;
-                document.getElementById('matches-count').textContent = '0';
-                document.getElementById('game-panel').style.opacity = '1';
-                document.getElementById('game-complete').style.display = 'none';
-                initGame();
+                location.reload();
             }
 
             document.addEventListener('DOMContentLoaded', initGame);
