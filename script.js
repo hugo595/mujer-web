@@ -208,7 +208,9 @@ class AppHeader extends HTMLElement {
         }
 
         @media (max-width: 992px) {
-          .header-container { padding: 0 1rem; }
+          .header-container { padding: 0 1.2rem; }
+          .logo-area { margin-left: 0; height: 60px; }
+          .logo-img { height: 100px; margin-top: 0; }
           .main-nav {
             display: none;
             position: absolute;
