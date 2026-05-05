@@ -1752,7 +1752,7 @@ img {
   
   /* Ajuste del mapa hacia la izquierda */
   #ubicacion .glass-feature-card:first-child {
-    margin-left: -0.5rem;
-    width: calc(100% + 0.5rem);
+    margin-left: -1.2rem;
+    width: calc(100% + 1.2rem);
   }
 }
