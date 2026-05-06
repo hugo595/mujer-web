@@ -243,7 +243,18 @@
             if (score === scenarios.length) updateScale(0);
         }
 
-        document.addEventListener('DOMContentLoaded', initGame);
+        document.addEventListener('DOMContentLoaded', () => {
+            initGame();
+            if (window.location.hash === '#actividad') {
+                const activitySection = document.getElementById('actividad');
+                if (activitySection) {
+                    setTimeout(() => {
+                        const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                        window.scrollTo({ top: y, behavior: 'instant' });
+                    }, 100);
+                }
+            }
+        });
     </script>
 </body>
 </html>

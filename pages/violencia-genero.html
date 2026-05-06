@@ -180,7 +180,7 @@
                     <div class="glass-panel" style="padding: 3rem; border-radius: 32px; max-width: 600px; margin: 0 auto; background: white; border: 2px solid var(--color-primary);">
                         <h3 style="font-size: 2.2rem; color: var(--color-primary-dark); margin-bottom: 1rem;">¡Derechos Reconocidos! ✨</h3>
                         <p style="font-size: 1.2rem; color: var(--color-text-muted); margin-bottom: 2.5rem;">Conocer tus derechos es el primer paso para defenderlos. Ninguna tradición o costumbre justifica la vulneración de tu integridad y libertad.</p>
-                        <button onclick="initGame()" class="btn btn-primary" style="padding: 1rem 3rem;">🔄 Reiniciar Mosaico</button>
+                        <button onclick="restartGame()" class="btn btn-primary" style="padding: 1rem 3rem;">🔄 Reiniciar Mosaico</button>
                     </div>
                 </div>
             </div>
@@ -235,7 +235,11 @@
                         if (rightsFound === totalRights) {
                             setTimeout(() => {
                                 document.getElementById('game-complete').style.display = 'block';
-                                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+                                const activitySection = document.getElementById('actividad');
+                                if (activitySection) {
+                                    const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                                    window.scrollTo({ top: y, behavior: 'smooth' });
+                                }
                             }, 500);
                         }
                     } else {
@@ -247,7 +251,23 @@
             });
         }
 
-        document.addEventListener('DOMContentLoaded', initGame);
+        function restartGame() {
+            window.location.href = window.location.pathname + '#actividad';
+            window.location.reload();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initGame();
+            if (window.location.hash === '#actividad') {
+                const activitySection = document.getElementById('actividad');
+                if (activitySection) {
+                    setTimeout(() => {
+                        const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                        window.scrollTo({ top: y, behavior: 'instant' });
+                    }, 100);
+                }
+            }
+        });
     </script>
 </body>
 </html>

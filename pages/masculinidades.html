@@ -244,10 +244,15 @@
                         card.classList.add('flipped');
                         flippedCount++;
                         if (flippedCount === mandates.length) {
-                            setTimeout(() => {
-                                document.getElementById('game-feedback').style.display = 'block';
-                                window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
-                            }, 1000);
+            setTimeout(() => {
+                const feedback = document.getElementById('game-feedback');
+                feedback.style.display = 'block';
+                const activity = document.getElementById('actividad');
+                if (activity) {
+                    const y = activity.getBoundingClientRect().top + window.pageYOffset - 100;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }
+            }, 1000);
                         }
                     }
                 };
@@ -257,7 +262,23 @@
             if (window.lucide) window.lucide.createIcons();
         }
 
-        document.addEventListener('DOMContentLoaded', initGame);
+        function restartGame() {
+            window.location.href = window.location.pathname + '#actividad';
+            window.location.reload();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initGame();
+            if (window.location.hash === '#actividad') {
+                const activitySection = document.getElementById('actividad');
+                if (activitySection) {
+                    setTimeout(() => {
+                        const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                        window.scrollTo({ top: y, behavior: 'instant' });
+                    }, 100);
+                }
+            }
+        });
     </script>
 </body>
 </html>

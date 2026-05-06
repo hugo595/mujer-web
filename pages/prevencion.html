@@ -358,7 +358,18 @@
                 window.location.reload();
             }
 
-            document.addEventListener('DOMContentLoaded', loadQuestion);
+            document.addEventListener('DOMContentLoaded', () => {
+                loadQuestion();
+                if (window.location.hash === '#actividad') {
+                    const activitySection = document.getElementById('actividad');
+                    if (activitySection) {
+                        setTimeout(() => {
+                            const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                            window.scrollTo({ top: y, behavior: 'instant' });
+                        }, 100);
+                    }
+                }
+            });
         </script>
     </main>
 

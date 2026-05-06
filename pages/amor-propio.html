@@ -287,17 +287,6 @@
         function showResults() {
             document.getElementById('quiz-progress-bar').style.width = '100%';
             
-            // Show results first to maintain page height
-            const results = document.getElementById('quiz-results');
-            results.style.display = 'block';
-            
-            // Force scroll to game start
-            const gameSection = document.getElementById('actividad');
-            if (gameSection) {
-                const yOffset = -100; 
-                const y = gameSection.getBoundingClientRect().top + window.pageYOffset + yOffset;
-                window.scrollTo({top: y, behavior: 'smooth'});
-            }
 
             document.getElementById('quiz-card').style.display = 'none';
 
@@ -321,7 +310,11 @@
             document.getElementById('results-emoji').textContent = emoji;
             document.getElementById('results-title').textContent = title;
             document.getElementById('results-message').textContent = message;
-            document.getElementById('results-score').textContent = `${score}/${shuffledData.length}`;
+            const activitySection = document.getElementById('actividad');
+            if (activitySection) {
+                const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
         }
 
         function restartQuiz() {
@@ -329,7 +322,16 @@
             window.location.reload();
         }
 
-        document.addEventListener('DOMContentLoaded', startQuiz);
+        document.addEventListener('DOMContentLoaded', () => {
+            startQuiz();
+            if (window.location.hash === '#actividad') {
+                const activity = document.getElementById('actividad');
+                if (activity) {
+                    const y = activity.getBoundingClientRect().top + window.pageYOffset - 100;
+                    window.scrollTo({ top: y, behavior: 'instant' });
+                }
+            }
+        });
         </script>
     </main>
 

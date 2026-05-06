@@ -227,7 +227,9 @@
             }
 
             updateUI();
-            if (selectedCount === targetCorrect) setTimeout(finishGame, 800);
+            if (selectedCount === targetCorrect) {
+                setTimeout(finishGame, 800);
+            }
         }
 
         function updateUI() {
@@ -254,13 +256,31 @@
                 title.textContent = "Fortaleza en Proceso 💜";
                 message.textContent = "Algunos elementos seleccionados pueden parecer seguros, pero a veces limitan nuestro crecimiento. Te invitamos a seguir explorando qué te hace sentir verdaderamente libre y capaz.";
             }
+
+            const activitySection = document.getElementById('actividad');
+            if (activitySection) {
+                const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+            }
         }
 
         function restartGame() {
-            initGame();
+            window.location.href = window.location.pathname + '#actividad';
+            window.location.reload();
         }
 
-        document.addEventListener('DOMContentLoaded', initGame);
+        document.addEventListener('DOMContentLoaded', () => {
+            initGame();
+            if (window.location.hash === '#actividad') {
+                const activitySection = document.getElementById('actividad');
+                if (activitySection) {
+                    setTimeout(() => {
+                        const y = activitySection.getBoundingClientRect().top + window.pageYOffset - 100;
+                        window.scrollTo({ top: y, behavior: 'instant' });
+                    }, 100);
+                }
+            }
+        });
     </script>
 </body>
 </html>
